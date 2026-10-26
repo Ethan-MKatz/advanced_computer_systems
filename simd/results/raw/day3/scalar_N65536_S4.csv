@@ -1,0 +1,2 @@
+N,stride,runtime_ms,checksum,correct
+65536,4,0.079367,145804.2804,true

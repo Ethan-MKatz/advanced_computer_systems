@@ -1,0 +1,2 @@
+kernel,N,median_ms,logical_GiB_per_s,GFLOP_per_s,checksum
+saxpy,8388608,4.809743,19.49168594,3.488173069,3.92741698

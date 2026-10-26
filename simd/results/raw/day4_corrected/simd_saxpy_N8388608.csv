@@ -1,0 +1,3 @@
+kernel,N,precision,median_ms,checksum,reference_checksum,relative_error,correct
+saxpy,8388608,float32,3.612588,21841831.8957,21841831.8919,1.73240123951e-10,true
+saxpy,8388608,float64,7.436538,21841831.88,21841831.88,0,true

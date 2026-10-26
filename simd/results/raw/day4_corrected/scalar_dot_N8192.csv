@@ -1,0 +1,3 @@
+kernel,N,precision,median_ms,checksum,reference_checksum,relative_error,correct
+dot,8192,float32,0.00436,11077.4257812,11077.4192111,5.93112199466e-07,true
+dot,8192,float64,0.004627,11077.4192,11077.4192,9.85241799035e-16,true

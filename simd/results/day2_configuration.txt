@@ -1,0 +1,9 @@
+=== Day 2 Benchmark Configuration ===
+Compiler: g++ (Ubuntu 13.3.0-6ubuntu2~24.04.1) 13.3.0
+Scalar flags: -O3 -fno-tree-vectorize -fno-tree-slp-vectorize
+Optimized flags: -O3 -march=native
+Kernels: elementwise multiplication, SAXPY, dot product
+Input sizes: 1024, 8192, 65536, 1048576, 8388608
+Repetitions: 9
+Statistic: median runtime
+Timing method: std::chrono::steady_clock

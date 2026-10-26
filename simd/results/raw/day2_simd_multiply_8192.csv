@@ -1,0 +1,2 @@
+kernel,N,median_ms,logical_GiB_per_s,GFLOP_per_s,checksum
+multiply,8192,0.001749,52.34576008,4.683819325,1.384275588

@@ -1,0 +1,5 @@
+N,build,repetitions,median_ms,logical_bandwidth_gib_s,correct
+8388608,scalar,10,9.111471,10.289228,true
+8388608,simd,10,7.492308,12.512833,true
+16777216,scalar,10,12.017466,15.602291,true
+16777216,simd,10,12.796369,14.652594,true

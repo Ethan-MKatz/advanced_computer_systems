@@ -1,0 +1,19 @@
+# Python environments and caches
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+
+# Compiled binaries and object files
+*.o
+benchmark_scalar
+benchmark_simd
+benchmark_day*_scalar
+benchmark_day*_simd
+benchmark_day3_tail
+memory_bandwidth_scalar
+memory_bandwidth_simd
+
+# Temporary and backup files
+*.bak
+*~
