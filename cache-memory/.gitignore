@@ -1,0 +1,5 @@
+# Compiled benchmarks (rebuild with scripts/build.sh)
+build/
+# Original top-level binaries from the first experiments (rebuild from src/)
+/latency
+/access_patterns

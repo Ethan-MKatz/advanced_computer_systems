@@ -1,0 +1,295 @@
+{
+ "run_id": "exp5_randread_4k_mid_qd16_t2",
+ "experiment": "exp5_tail",
+ "name": "exp5_randread_4k_mid_qd16",
+ "trial": 2,
+ "job_file": "configs/exp5_tail_latency.fio",
+ "job_sha256": "48e2f89b641c56020cdfdf7444226e8f5bdb7004fed1630af197d793fa2f74b3",
+ "job_text": "; Experiment 5: tail latency at mid-QD vs near-knee QD (depths chosen from exp4)\n; Run with --output-format=json+ to keep the full per-I/O latency histogram (bins)\n[global]\n; --- target: the single disposable file prepared by scripts/prepare_testfile.py\nfilename=${TESTFILE}\nallow_file_create=0\nunlink=0\noffset=0\nsize=${SIZE}\n; --- engine / I/O path\nioengine=${ENGINE}\ndirect=${DIRECT}\nthread=0\n; --- timing\ntime_based=1\nramp_time=${RAMP}\nruntime=${RUNTIME}\n; --- reproducible, aligned random offsets (blockalign defaults to bs)\nrandseed=${SEED}\nrandom_generator=tausworthe64\nnorandommap=1\n; --- data pattern: incompressible pseudo-random buffer, generated once per job\nrefill_buffers=0\n; --- statistics: total latency (submit + completion) percentiles\nlat_percentiles=1\npercentile_list=1:5:10:25:50:75:90:95:99:99.5:99.9:99.99\n; aggregate numjobs>1 deliberately into one result (only exp4 parallel curve uses numjobs>1)\ngroup_reporting=1\n\n[tail]\nrw=randread\nbs=4k\niodepth=${QD}\nnumjobs=1\n",
+ "params": {
+  "SIZE": "4g",
+  "ENGINE": "io_uring",
+  "DIRECT": "1",
+  "RAMP": "2",
+  "QD": "16",
+  "RUNTIME": "60",
+  "SEED": "4322"
+ },
+ "testfile": "/home/wayslab/advanced_computer_systems/ssd/testfile/fio_testfile.bin",
+ "command": [
+  "fio",
+  "--output-format=json+",
+  "--output=/home/wayslab/advanced_computer_systems/ssd/results/raw/exp5_tail/exp5_randread_4k_mid_qd16_t2.json",
+  "/home/wayslab/advanced_computer_systems/ssd/configs/exp5_tail_latency.fio"
+ ],
+ "output_format": "json+",
+ "started_utc": "2026-10-26T08:48:40.590212+00:00",
+ "elapsed_s": 62.31,
+ "returncode": 0,
+ "aborted_for_temperature_c": null,
+ "nvme_temp_before_c": 47.85,
+ "nvme_temp_after_c": 45.85,
+ "nvme_temp_max_c": 47.85,
+ "nvme_temp_trace": [
+  [
+   0.0,
+   47.85
+  ],
+  [
+   1.01,
+   47.85
+  ],
+  [
+   2.01,
+   47.85
+  ],
+  [
+   3.01,
+   47.85
+  ],
+  [
+   4.01,
+   47.85
+  ],
+  [
+   5.01,
+   47.85
+  ],
+  [
+   6.01,
+   47.85
+  ],
+  [
+   7.01,
+   47.85
+  ],
+  [
+   8.02,
+   47.85
+  ],
+  [
+   9.02,
+   46.85
+  ],
+  [
+   10.02,
+   46.85
+  ],
+  [
+   11.02,
+   46.85
+  ],
+  [
+   12.02,
+   46.85
+  ],
+  [
+   13.02,
+   46.85
+  ],
+  [
+   14.02,
+   46.85
+  ],
+  [
+   15.02,
+   46.85
+  ],
+  [
+   16.02,
+   46.85
+  ],
+  [
+   17.03,
+   46.85
+  ],
+  [
+   18.03,
+   46.85
+  ],
+  [
+   19.03,
+   46.85
+  ],
+  [
+   20.03,
+   46.85
+  ],
+  [
+   21.03,
+   46.85
+  ],
+  [
+   22.03,
+   46.85
+  ],
+  [
+   23.03,
+   46.85
+  ],
+  [
+   24.03,
+   46.85
+  ],
+  [
+   25.03,
+   46.85
+  ],
+  [
+   26.04,
+   46.85
+  ],
+  [
+   27.04,
+   46.85
+  ],
+  [
+   28.04,
+   46.85
+  ],
+  [
+   29.04,
+   46.85
+  ],
+  [
+   30.04,
+   46.85
+  ],
+  [
+   31.04,
+   46.85
+  ],
+  [
+   32.04,
+   46.85
+  ],
+  [
+   33.05,
+   46.85
+  ],
+  [
+   34.05,
+   46.85
+  ],
+  [
+   35.05,
+   46.85
+  ],
+  [
+   36.05,
+   46.85
+  ],
+  [
+   37.05,
+   46.85
+  ],
+  [
+   38.06,
+   46.85
+  ],
+  [
+   39.06,
+   46.85
+  ],
+  [
+   40.06,
+   46.85
+  ],
+  [
+   41.07,
+   46.85
+  ],
+  [
+   42.07,
+   46.85
+  ],
+  [
+   43.07,
+   46.85
+  ],
+  [
+   44.07,
+   46.85
+  ],
+  [
+   45.07,
+   46.85
+  ],
+  [
+   46.07,
+   46.85
+  ],
+  [
+   47.07,
+   46.85
+  ],
+  [
+   48.07,
+   46.85
+  ],
+  [
+   49.08,
+   46.85
+  ],
+  [
+   50.08,
+   46.85
+  ],
+  [
+   51.08,
+   46.85
+  ],
+  [
+   52.08,
+   46.85
+  ],
+  [
+   53.08,
+   45.85
+  ],
+  [
+   54.08,
+   46.85
+  ],
+  [
+   55.08,
+   46.85
+  ],
+  [
+   56.08,
+   45.85
+  ],
+  [
+   57.09,
+   45.85
+  ],
+  [
+   58.09,
+   45.85
+  ],
+  [
+   59.09,
+   45.85
+  ],
+  [
+   60.09,
+   45.85
+  ],
+  [
+   61.09,
+   45.85
+  ],
+  [
+   62.09,
+   45.85
+  ]
+ ],
+ "free_bytes_before": 517645934592,
+ "free_bytes_after": 517645316096,
+ "power": {
+  "ac_online": true,
+  "battery_pct": 100,
+  "platform_profile": "balanced"
+ },
+ "stderr_file": "exp5_randread_4k_mid_qd16_t2.stderr.txt"
+}

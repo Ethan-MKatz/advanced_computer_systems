@@ -1,0 +1,111 @@
+# collected 2026-10-26T10:08:25-04:00
+## OS / kernel
+Description:	Ubuntu 24.04.4 LTS
+Linux wayslab 6.17.0-1033-oem #33-Ubuntu SMP PREEMPT_DYNAMIC Mon Aug 24 05:45:54 UTC 2026 x86_64 x86_64 x86_64 GNU/Linux
+## compiler
+g++ (Ubuntu 13.3.0-6ubuntu2~24.04.1) 13.3.0
+## CPU
+Architecture:                            x86_64
+CPU op-mode(s):                          32-bit, 64-bit
+Address sizes:                           46 bits physical, 48 bits virtual
+Byte Order:                              Little Endian
+CPU(s):                                  14
+On-line CPU(s) list:                     0-13
+Vendor ID:                               GenuineIntel
+Model name:                              Intel(R) Core(TM) Ultra 7 255U
+CPU family:                              6
+Model:                                   181
+Thread(s) per core:                      2
+Core(s) per socket:                      12
+Socket(s):                               1
+Stepping:                                0
+CPU(s) scaling MHz:                      26%
+CPU max MHz:                             5200.0000
+CPU min MHz:                             400.0000
+BogoMIPS:                                6528.00
+Flags:                                   fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush dts acpi mmx fxsr sse sse2 ss ht tm pbe syscall nx pdpe1gb rdtscp lm constant_tsc art arch_perfmon pebs bts rep_good nopl xtopology nonstop_tsc cpuid aperfmperf tsc_known_freq pni pclmulqdq dtes64 monitor ds_cpl vmx smx est tm2 ssse3 sdbg fma cx16 xtpr pdcm pcid sse4_1 sse4_2 x2apic movbe popcnt tsc_deadline_timer aes xsave avx f16c rdrand lahf_lm abm 3dnowprefetch cpuid_fault epb ssbd ibrs ibpb stibp ibrs_enhanced tpr_shadow flexpriority ept vpid ept_ad fsgsbase tsc_adjust bmi1 avx2 smep bmi2 erms invpcid rdseed adx smap clflushopt clwb intel_pt sha_ni xsaveopt xsavec xgetbv1 xsaves split_lock_detect user_shstk avx_vnni dtherm ida arat pln pts hwp hwp_notify hwp_act_window hwp_epp hwp_pkg_req hfi vnmi umip pku ospke waitpkg gfni vaes vpclmulqdq rdpid bus_lock_detect movdiri movdir64b fsrm md_clear serialize arch_lbr ibt flush_l1d arch_capabilities
+Virtualization:                          VT-x
+L1d cache:                               352 KiB (10 instances)
+L1i cache:                               640 KiB (10 instances)
+L2 cache:                                10 MiB (5 instances)
+L3 cache:                                12 MiB (1 instance)
+NUMA node(s):                            1
+NUMA node0 CPU(s):                       0-13
+Vulnerability Gather data sampling:      Not affected
+Vulnerability Ghostwrite:                Not affected
+Vulnerability Indirect target selection: Not affected
+Vulnerability Itlb multihit:             Not affected
+Vulnerability L1tf:                      Not affected
+Vulnerability Mds:                       Not affected
+Vulnerability Meltdown:                  Not affected
+Vulnerability Mmio stale data:           Not affected
+Vulnerability Old microcode:             Not affected
+Vulnerability Reg file data sampling:    Not affected
+Vulnerability Retbleed:                  Not affected
+Vulnerability Spec rstack overflow:      Not affected
+Vulnerability Spec store bypass:         Mitigation; Speculative Store Bypass disabled via prctl
+Vulnerability Spectre v1:                Mitigation; usercopy/swapgs barriers and __user pointer sanitization
+Vulnerability Spectre v2:                Mitigation; Enhanced / Automatic IBRS; IBPB conditional; PBRSB-eIBRS Not affected; BHI BHI_DIS_S
+Vulnerability Srbds:                     Not affected
+Vulnerability Tsa:                       Not affected
+Vulnerability Tsx async abort:           Not affected
+Vulnerability Vmscape:                   Mitigation; IBPB before exit to userspace
+## per-CPU caches (sysfs)
+cpu0: L1D=48K[0-1] L1I=64K[0-1] L2U=2048K[0-1] L3U=12288K[0-11]
+cpu1: L1D=48K[0-1] L1I=64K[0-1] L2U=2048K[0-1] L3U=12288K[0-11]
+cpu10: L1D=32K[10] L1I=64K[10] L2U=2048K[8-11] L3U=12288K[0-11]
+cpu11: L1D=32K[11] L1I=64K[11] L2U=2048K[8-11] L3U=12288K[0-11]
+cpu12: L1D=32K[12] L1I=64K[12] L2U=2048K[12-13]
+cpu13: L1D=32K[13] L1I=64K[13] L2U=2048K[12-13]
+cpu2: L1D=48K[2-3] L1I=64K[2-3] L2U=2048K[2-3] L3U=12288K[0-11]
+cpu3: L1D=48K[2-3] L1I=64K[2-3] L2U=2048K[2-3] L3U=12288K[0-11]
+cpu4: L1D=32K[4] L1I=64K[4] L2U=2048K[4-7] L3U=12288K[0-11]
+cpu5: L1D=32K[5] L1I=64K[5] L2U=2048K[4-7] L3U=12288K[0-11]
+cpu6: L1D=32K[6] L1I=64K[6] L2U=2048K[4-7] L3U=12288K[0-11]
+cpu7: L1D=32K[7] L1I=64K[7] L2U=2048K[4-7] L3U=12288K[0-11]
+cpu8: L1D=32K[8] L1I=64K[8] L2U=2048K[8-11] L3U=12288K[0-11]
+cpu9: L1D=32K[9] L1I=64K[9] L2U=2048K[8-11] L3U=12288K[0-11]
+## core types
+cpu_core (P): 0-3
+cpu_atom (E/LP-E): 4-13
+## affinity of this shell
+pid 1428238's current affinity list: 0-3,12,13
+## frequency scaling
+driver=intel_pstate governor=powersave epp=balance_power no_turbo=0 platform_profile=balanced
+cpu0 max=5200000 kHz
+cpu2 max=5200000 kHz
+cpu12 max=2400000 kHz
+## power
+AC online=0 battery=98% Discharging
+## CPU0 frequency under a 1 s single-thread load (scaling_cur_freq, kHz)
+2299976
+2882019
+2900000
+2833401
+## memory
+               total        used        free      shared  buff/cache   available
+Mem:            30Gi        18Gi       611Mi       2.8Gi        13Gi        12Gi
+Swap:          8.0Gi       1.7Mi       8.0Gi
+AnonHugePages:         0 kB
+ShmemHugePages:  2043904 kB
+FileHugePages:    468992 kB
+HugePages_Total:       0
+HugePages_Free:        0
+HugePages_Rsvd:        0
+HugePages_Surp:        0
+Hugepagesize:       2048 kB
+Hugetlb:               0 kB
+## transparent huge pages
+enabled: always [madvise] never
+defrag: always defer defer+madvise [madvise] never
+## perf
+perf_event_paranoid=4
+WARNING: perf not found for kernel 6.17.0-1033
+## perf_event_open probe (build/counter_probe)
+event,type,status,detail
+hw_cpu_cycles,0,unavailable,Permission denied
+hw_cache_misses,0,unavailable,Permission denied
+l1d_read_miss,3,unavailable,Permission denied
+dtlb_read_miss,3,unavailable,Permission denied
+sw_page_faults,1,unavailable,Permission denied
+sw_task_clock,1,unavailable,Permission denied

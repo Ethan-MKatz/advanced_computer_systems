@@ -1,0 +1,176 @@
+{
+ "run_id": "exp1_randwrite_4k_qd1_t3",
+ "experiment": "exp1_qd1",
+ "name": "exp1_randwrite_4k_qd1",
+ "trial": 3,
+ "job_file": "configs/exp1_qd1_baseline.fio",
+ "job_sha256": "f85f040a3a99ea9e556ac2841194bfab2fa33e8666de345d0dafbb5a71153372",
+ "job_text": "; Experiment 1: QD=1 baselines (iodepth=1, numjobs=1)\n; RW in {randread,randwrite,read,write}, BS in {4k,128k}\n[global]\n; --- target: the single disposable file prepared by scripts/prepare_testfile.py\nfilename=${TESTFILE}\nallow_file_create=0\nunlink=0\noffset=0\nsize=${SIZE}\n; --- engine / I/O path\nioengine=${ENGINE}\ndirect=${DIRECT}\nthread=0\n; --- timing\ntime_based=1\nramp_time=${RAMP}\nruntime=${RUNTIME}\n; --- reproducible, aligned random offsets (blockalign defaults to bs)\nrandseed=${SEED}\nrandom_generator=tausworthe64\nnorandommap=1\n; --- data pattern: incompressible pseudo-random buffer, generated once per job\nrefill_buffers=0\n; --- statistics: total latency (submit + completion) percentiles\nlat_percentiles=1\npercentile_list=1:5:10:25:50:75:90:95:99:99.5:99.9:99.99\n; aggregate numjobs>1 deliberately into one result (only exp4 parallel curve uses numjobs>1)\ngroup_reporting=1\n\n[qd1]\nrw=${RW}\nbs=${BS}\niodepth=1\nnumjobs=1\n",
+ "params": {
+  "SIZE": "4g",
+  "ENGINE": "io_uring",
+  "DIRECT": "1",
+  "RAMP": "2",
+  "RW": "randwrite",
+  "BS": "4k",
+  "RUNTIME": "30",
+  "SEED": "4323"
+ },
+ "testfile": "/home/wayslab/advanced_computer_systems/ssd/testfile/fio_testfile.bin",
+ "command": [
+  "fio",
+  "--output-format=json",
+  "--output=/home/wayslab/advanced_computer_systems/ssd/results/raw/exp1_qd1/exp1_randwrite_4k_qd1_t3.json",
+  "/home/wayslab/advanced_computer_systems/ssd/configs/exp1_qd1_baseline.fio"
+ ],
+ "output_format": "json",
+ "started_utc": "2026-10-26T07:59:53.139066+00:00",
+ "elapsed_s": 32.29,
+ "returncode": 0,
+ "aborted_for_temperature_c": null,
+ "nvme_temp_before_c": 43.85,
+ "nvme_temp_after_c": 42.85,
+ "nvme_temp_max_c": 43.85,
+ "nvme_temp_trace": [
+  [
+   0.0,
+   43.85
+  ],
+  [
+   1.01,
+   43.85
+  ],
+  [
+   2.01,
+   43.85
+  ],
+  [
+   3.01,
+   43.85
+  ],
+  [
+   4.01,
+   43.85
+  ],
+  [
+   5.02,
+   43.85
+  ],
+  [
+   6.02,
+   43.85
+  ],
+  [
+   7.02,
+   43.85
+  ],
+  [
+   8.02,
+   43.85
+  ],
+  [
+   9.02,
+   43.85
+  ],
+  [
+   10.03,
+   43.85
+  ],
+  [
+   11.03,
+   43.85
+  ],
+  [
+   12.03,
+   43.85
+  ],
+  [
+   13.03,
+   43.85
+  ],
+  [
+   14.04,
+   43.85
+  ],
+  [
+   15.04,
+   43.85
+  ],
+  [
+   16.04,
+   43.85
+  ],
+  [
+   17.04,
+   43.85
+  ],
+  [
+   18.05,
+   43.85
+  ],
+  [
+   19.05,
+   43.85
+  ],
+  [
+   20.05,
+   43.85
+  ],
+  [
+   21.05,
+   43.85
+  ],
+  [
+   22.06,
+   42.85
+  ],
+  [
+   23.06,
+   42.85
+  ],
+  [
+   24.06,
+   42.85
+  ],
+  [
+   25.06,
+   42.85
+  ],
+  [
+   26.06,
+   42.85
+  ],
+  [
+   27.06,
+   42.85
+  ],
+  [
+   28.06,
+   42.85
+  ],
+  [
+   29.06,
+   42.85
+  ],
+  [
+   30.06,
+   42.85
+  ],
+  [
+   31.07,
+   42.85
+  ],
+  [
+   32.07,
+   42.85
+  ]
+ ],
+ "free_bytes_before": 517715054592,
+ "free_bytes_after": 517714808832,
+ "power": {
+  "ac_online": true,
+  "battery_pct": 84,
+  "platform_profile": "balanced"
+ },
+ "stderr_file": "exp1_randwrite_4k_qd1_t3.stderr.txt"
+}

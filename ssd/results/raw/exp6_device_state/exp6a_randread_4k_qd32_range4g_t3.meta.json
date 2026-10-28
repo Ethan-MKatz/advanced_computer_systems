@@ -1,0 +1,135 @@
+{
+ "run_id": "exp6a_randread_4k_qd32_range4g_t3",
+ "experiment": "exp6_device_state",
+ "name": "exp6a_randread_4k_qd32_range4g",
+ "trial": 3,
+ "job_file": "configs/exp6_working_set.fio",
+ "job_sha256": "6ab6de96422935d3172b8127d7921aa0c432675dc7f8e07714f3efd973a7952c",
+ "job_text": "; Experiment 6a: working-set (LBA range) sweep; SIZE = accessed range from offset 0\n[global]\n; --- target: the single disposable file prepared by scripts/prepare_testfile.py\nfilename=${TESTFILE}\nallow_file_create=0\nunlink=0\noffset=0\nsize=${SIZE}\n; --- engine / I/O path\nioengine=${ENGINE}\ndirect=${DIRECT}\nthread=0\n; --- timing\ntime_based=1\nramp_time=${RAMP}\nruntime=${RUNTIME}\n; --- reproducible, aligned random offsets (blockalign defaults to bs)\nrandseed=${SEED}\nrandom_generator=tausworthe64\nnorandommap=1\n; --- data pattern: incompressible pseudo-random buffer, generated once per job\nrefill_buffers=0\n; --- statistics: total latency (submit + completion) percentiles\nlat_percentiles=1\npercentile_list=1:5:10:25:50:75:90:95:99:99.5:99.9:99.99\n; aggregate numjobs>1 deliberately into one result (only exp4 parallel curve uses numjobs>1)\ngroup_reporting=1\n\n[working_set]\nrw=${RW}\nbs=4k\niodepth=32\nnumjobs=1\n",
+ "params": {
+  "SIZE": "4g",
+  "ENGINE": "io_uring",
+  "DIRECT": "1",
+  "RAMP": "2",
+  "RW": "randread",
+  "RUNTIME": "20",
+  "SEED": "4323"
+ },
+ "testfile": "/home/wayslab/advanced_computer_systems/ssd/testfile/fio_testfile.bin",
+ "command": [
+  "fio",
+  "--output-format=json",
+  "--output=/home/wayslab/advanced_computer_systems/ssd/results/raw/exp6_device_state/exp6a_randread_4k_qd32_range4g_t3.json",
+  "/home/wayslab/advanced_computer_systems/ssd/configs/exp6_working_set.fio"
+ ],
+ "output_format": "json",
+ "started_utc": "2026-10-26T08:59:53.656113+00:00",
+ "elapsed_s": 22.29,
+ "returncode": 0,
+ "aborted_for_temperature_c": null,
+ "nvme_temp_before_c": 46.85,
+ "nvme_temp_after_c": 46.85,
+ "nvme_temp_max_c": 46.85,
+ "nvme_temp_trace": [
+  [
+   0.0,
+   46.85
+  ],
+  [
+   1.0,
+   46.85
+  ],
+  [
+   2.01,
+   46.85
+  ],
+  [
+   3.01,
+   46.85
+  ],
+  [
+   4.01,
+   46.85
+  ],
+  [
+   5.01,
+   46.85
+  ],
+  [
+   6.01,
+   46.85
+  ],
+  [
+   7.01,
+   46.85
+  ],
+  [
+   8.02,
+   46.85
+  ],
+  [
+   9.02,
+   46.85
+  ],
+  [
+   10.02,
+   46.85
+  ],
+  [
+   11.02,
+   46.85
+  ],
+  [
+   12.02,
+   46.85
+  ],
+  [
+   13.02,
+   46.85
+  ],
+  [
+   14.02,
+   46.85
+  ],
+  [
+   15.02,
+   46.85
+  ],
+  [
+   16.02,
+   46.85
+  ],
+  [
+   17.03,
+   46.85
+  ],
+  [
+   18.03,
+   46.85
+  ],
+  [
+   19.03,
+   46.85
+  ],
+  [
+   20.03,
+   46.85
+  ],
+  [
+   21.03,
+   46.85
+  ],
+  [
+   22.04,
+   46.85
+  ]
+ ],
+ "free_bytes_before": 517634273280,
+ "free_bytes_after": 517634068480,
+ "power": {
+  "ac_online": true,
+  "battery_pct": 100,
+  "platform_profile": "balanced"
+ },
+ "stderr_file": "exp6a_randread_4k_qd32_range4g_t3.stderr.txt"
+}

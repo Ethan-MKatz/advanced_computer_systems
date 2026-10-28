@@ -1,0 +1,117 @@
+{
+ "run_id": "exp7_randwrite_buffered_t1",
+ "experiment": "exp7_pitfall",
+ "name": "exp7_randwrite_buffered",
+ "trial": 1,
+ "job_file": "configs/exp7_buffered_vs_direct.fio",
+ "job_sha256": "2dec160eb04fba82a2a3de32a34c0bd2b2ed97f0b8c280a7fe3cf6bc8e595997",
+ "job_text": "; Experiment 7: buffered (page cache) vs direct I/O, synchronous psync engine, QD=1\n; DIRECT in {0,1}; INVALIDATE=1 drops this file's cached pages before the run\n; (posix_fadvise DONTNEED - no root needed). Wrong-QD demo: psync with QD=32.\n[global]\n; --- target: the single disposable file prepared by scripts/prepare_testfile.py\nfilename=${TESTFILE}\nallow_file_create=0\nunlink=0\noffset=0\nsize=${SIZE}\n; --- engine / I/O path\nioengine=${ENGINE}\ndirect=${DIRECT}\nthread=0\n; --- timing\ntime_based=1\nramp_time=${RAMP}\nruntime=${RUNTIME}\n; --- reproducible, aligned random offsets (blockalign defaults to bs)\nrandseed=${SEED}\nrandom_generator=tausworthe64\nnorandommap=1\n; --- data pattern: incompressible pseudo-random buffer, generated once per job\nrefill_buffers=0\n; --- statistics: total latency (submit + completion) percentiles\nlat_percentiles=1\npercentile_list=1:5:10:25:50:75:90:95:99:99.5:99.9:99.99\n; aggregate numjobs>1 deliberately into one result (only exp4 parallel curve uses numjobs>1)\ngroup_reporting=1\ninvalidate=${INVALIDATE}\n\n[pitfall]\nrw=${RW}\nbs=4k\niodepth=${QD}\nnumjobs=1\n",
+ "params": {
+  "SIZE": "1g",
+  "ENGINE": "psync",
+  "DIRECT": "0",
+  "RAMP": "2",
+  "RUNTIME": "15",
+  "QD": "1",
+  "SEED": "4321",
+  "RW": "randwrite",
+  "INVALIDATE": "0"
+ },
+ "testfile": "/home/wayslab/advanced_computer_systems/ssd/testfile/fio_testfile.bin",
+ "command": [
+  "fio",
+  "--output-format=json",
+  "--output=/home/wayslab/advanced_computer_systems/ssd/results/raw/exp7_pitfall/exp7_randwrite_buffered_t1.json",
+  "/home/wayslab/advanced_computer_systems/ssd/configs/exp7_buffered_vs_direct.fio"
+ ],
+ "output_format": "json",
+ "started_utc": "2026-10-26T09:09:56.440399+00:00",
+ "elapsed_s": 17.31,
+ "returncode": 0,
+ "aborted_for_temperature_c": null,
+ "nvme_temp_before_c": 40.85,
+ "nvme_temp_after_c": 39.85,
+ "nvme_temp_max_c": 40.85,
+ "nvme_temp_trace": [
+  [
+   0.0,
+   40.85
+  ],
+  [
+   1.01,
+   40.85
+  ],
+  [
+   2.02,
+   40.85
+  ],
+  [
+   3.04,
+   40.85
+  ],
+  [
+   4.05,
+   40.85
+  ],
+  [
+   5.06,
+   40.85
+  ],
+  [
+   6.07,
+   40.85
+  ],
+  [
+   7.08,
+   40.85
+  ],
+  [
+   8.09,
+   40.85
+  ],
+  [
+   9.1,
+   40.85
+  ],
+  [
+   10.11,
+   40.85
+  ],
+  [
+   11.12,
+   40.85
+  ],
+  [
+   12.13,
+   40.85
+  ],
+  [
+   13.14,
+   40.85
+  ],
+  [
+   14.16,
+   40.85
+  ],
+  [
+   15.17,
+   40.85
+  ],
+  [
+   16.18,
+   40.85
+  ],
+  [
+   17.19,
+   39.85
+  ]
+ ],
+ "free_bytes_before": 517628551168,
+ "free_bytes_after": 517628108800,
+ "power": {
+  "ac_online": true,
+  "battery_pct": 100,
+  "platform_profile": "balanced"
+ },
+ "stderr_file": "exp7_randwrite_buffered_t1.stderr.txt"
+}

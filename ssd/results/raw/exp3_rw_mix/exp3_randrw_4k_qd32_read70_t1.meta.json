@@ -1,0 +1,175 @@
+{
+ "run_id": "exp3_randrw_4k_qd32_read70_t1",
+ "experiment": "exp3_rw_mix",
+ "name": "exp3_randrw_4k_qd32_read70",
+ "trial": 1,
+ "job_file": "configs/exp3_rw_mix.fio",
+ "job_sha256": "887fe8386f4f3e090b4e14660e481c1feb9d114923867450395e677dea8fd27e",
+ "job_text": "; Experiment 3: read/write mix sweep, 4 KiB random, iodepth=32, numjobs=1\n; RWMIXREAD = percentage of reads (100, 70, 50, 0)\n[global]\n; --- target: the single disposable file prepared by scripts/prepare_testfile.py\nfilename=${TESTFILE}\nallow_file_create=0\nunlink=0\noffset=0\nsize=${SIZE}\n; --- engine / I/O path\nioengine=${ENGINE}\ndirect=${DIRECT}\nthread=0\n; --- timing\ntime_based=1\nramp_time=${RAMP}\nruntime=${RUNTIME}\n; --- reproducible, aligned random offsets (blockalign defaults to bs)\nrandseed=${SEED}\nrandom_generator=tausworthe64\nnorandommap=1\n; --- data pattern: incompressible pseudo-random buffer, generated once per job\nrefill_buffers=0\n; --- statistics: total latency (submit + completion) percentiles\nlat_percentiles=1\npercentile_list=1:5:10:25:50:75:90:95:99:99.5:99.9:99.99\n; aggregate numjobs>1 deliberately into one result (only exp4 parallel curve uses numjobs>1)\ngroup_reporting=1\n\n[rw_mix]\nrw=randrw\nrwmixread=${RWMIXREAD}\nbs=4k\niodepth=32\nnumjobs=1\n",
+ "params": {
+  "SIZE": "4g",
+  "ENGINE": "io_uring",
+  "DIRECT": "1",
+  "RAMP": "2",
+  "RWMIXREAD": "70",
+  "RUNTIME": "30",
+  "SEED": "4321"
+ },
+ "testfile": "/home/wayslab/advanced_computer_systems/ssd/testfile/fio_testfile.bin",
+ "command": [
+  "fio",
+  "--output-format=json",
+  "--output=/home/wayslab/advanced_computer_systems/ssd/results/raw/exp3_rw_mix/exp3_randrw_4k_qd32_read70_t1.json",
+  "/home/wayslab/advanced_computer_systems/ssd/configs/exp3_rw_mix.fio"
+ ],
+ "output_format": "json",
+ "started_utc": "2026-10-26T08:22:49.011878+00:00",
+ "elapsed_s": 32.29,
+ "returncode": 0,
+ "aborted_for_temperature_c": null,
+ "nvme_temp_before_c": 48.85,
+ "nvme_temp_after_c": 46.85,
+ "nvme_temp_max_c": 48.85,
+ "nvme_temp_trace": [
+  [
+   0.0,
+   48.85
+  ],
+  [
+   1.0,
+   48.85
+  ],
+  [
+   2.01,
+   48.85
+  ],
+  [
+   3.01,
+   47.85
+  ],
+  [
+   4.01,
+   47.85
+  ],
+  [
+   5.01,
+   47.85
+  ],
+  [
+   6.01,
+   47.85
+  ],
+  [
+   7.01,
+   47.85
+  ],
+  [
+   8.01,
+   47.85
+  ],
+  [
+   9.02,
+   47.85
+  ],
+  [
+   10.02,
+   47.85
+  ],
+  [
+   11.02,
+   47.85
+  ],
+  [
+   12.02,
+   47.85
+  ],
+  [
+   13.02,
+   47.85
+  ],
+  [
+   14.02,
+   47.85
+  ],
+  [
+   15.02,
+   47.85
+  ],
+  [
+   16.02,
+   47.85
+  ],
+  [
+   17.02,
+   47.85
+  ],
+  [
+   18.02,
+   46.85
+  ],
+  [
+   19.02,
+   46.85
+  ],
+  [
+   20.03,
+   46.85
+  ],
+  [
+   21.03,
+   46.85
+  ],
+  [
+   22.03,
+   46.85
+  ],
+  [
+   23.03,
+   46.85
+  ],
+  [
+   24.03,
+   46.85
+  ],
+  [
+   25.03,
+   46.85
+  ],
+  [
+   26.03,
+   46.85
+  ],
+  [
+   27.03,
+   46.85
+  ],
+  [
+   28.03,
+   46.85
+  ],
+  [
+   29.03,
+   46.85
+  ],
+  [
+   30.03,
+   46.85
+  ],
+  [
+   31.04,
+   46.85
+  ],
+  [
+   32.04,
+   46.85
+  ]
+ ],
+ "free_bytes_before": 517691707392,
+ "free_bytes_after": 517691453440,
+ "power": {
+  "ac_online": true,
+  "battery_pct": 96,
+  "platform_profile": "balanced"
+ },
+ "stderr_file": "exp3_randrw_4k_qd32_read70_t1.stderr.txt"
+}

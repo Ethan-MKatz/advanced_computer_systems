@@ -1,0 +1,21 @@
+; One-time creation of the disposable 4 GiB benchmark file.
+; Writes every block once with incompressible pseudo-random data using direct I/O,
+; so later reads hit real mapped flash (not ext4 unwritten extents that return zeros
+; without touching the device). Run only through scripts/prepare_testfile.py.
+[global]
+filename=${TESTFILE}
+allow_file_create=1
+unlink=0
+size=4g
+ioengine=io_uring
+direct=1
+fallocate=none
+refill_buffers=0
+randseed=4320
+
+[prepare]
+rw=write
+bs=1m
+iodepth=8
+numjobs=1
+end_fsync=1

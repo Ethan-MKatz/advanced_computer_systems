@@ -1,0 +1,438 @@
+/home/wayslab/advanced_computer_systems/ssd/testfile/fio_testfile.bin already prepared (4294967296 bytes); nothing to do
+target OK: /home/wayslab/advanced_computer_systems/ssd/testfile/fio_testfile.bin temp 36.85 C {'ac_online': True, 'battery_pct': 79, 'platform_profile': 'balanced'}
+  [run ] exp1_randread_4k_qd1_t1  SIZE=4g ENGINE=io_uring DIRECT=1 RAMP=2 RW=randread BS=4k RUNTIME=30 SEED=4321
+         ok, 32s, NVMe 36.85->38.85 C (max 37.85)
+  [run ] exp1_randwrite_4k_qd1_t1  SIZE=4g ENGINE=io_uring DIRECT=1 RAMP=2 RW=randwrite BS=4k RUNTIME=30 SEED=4321
+         ok, 32s, NVMe 38.85->39.85 C (max 39.85)
+  [run ] exp1_read_128k_qd1_t1  SIZE=4g ENGINE=io_uring DIRECT=1 RAMP=2 RW=read BS=128k RUNTIME=30 SEED=4321
+         ok, 32s, NVMe 39.85->44.85 C (max 44.85)
+  [run ] exp1_write_128k_qd1_t1  SIZE=4g ENGINE=io_uring DIRECT=1 RAMP=2 RW=write BS=128k RUNTIME=30 SEED=4321
+         ok, 32s, NVMe 44.85->44.85 C (max 44.85)
+  [run ] exp1_randread_4k_qd1_t2  SIZE=4g ENGINE=io_uring DIRECT=1 RAMP=2 RW=randread BS=4k RUNTIME=30 SEED=4322
+         ok, 32s, NVMe 44.85->42.85 C (max 44.85)
+  [run ] exp1_randwrite_4k_qd1_t2  SIZE=4g ENGINE=io_uring DIRECT=1 RAMP=2 RW=randwrite BS=4k RUNTIME=30 SEED=4322
+         ok, 32s, NVMe 42.85->42.85 C (max 42.85)
+  [run ] exp1_read_128k_qd1_t2  SIZE=4g ENGINE=io_uring DIRECT=1 RAMP=2 RW=read BS=128k RUNTIME=30 SEED=4322
+         ok, 32s, NVMe 42.85->46.85 C (max 46.85)
+  [run ] exp1_write_128k_qd1_t2  SIZE=4g ENGINE=io_uring DIRECT=1 RAMP=2 RW=write BS=128k RUNTIME=30 SEED=4322
+         ok, 32s, NVMe 46.85->46.85 C (max 46.85)
+  [run ] exp1_randread_4k_qd1_t3  SIZE=4g ENGINE=io_uring DIRECT=1 RAMP=2 RW=randread BS=4k RUNTIME=30 SEED=4323
+         ok, 32s, NVMe 46.85->43.85 C (max 46.85)
+  [run ] exp1_randwrite_4k_qd1_t3  SIZE=4g ENGINE=io_uring DIRECT=1 RAMP=2 RW=randwrite BS=4k RUNTIME=30 SEED=4323
+         ok, 32s, NVMe 43.85->42.85 C (max 43.85)
+  [run ] exp1_read_128k_qd1_t3  SIZE=4g ENGINE=io_uring DIRECT=1 RAMP=2 RW=read BS=128k RUNTIME=30 SEED=4323
+         ok, 32s, NVMe 42.85->47.85 C (max 47.85)
+  [run ] exp1_write_128k_qd1_t3  SIZE=4g ENGINE=io_uring DIRECT=1 RAMP=2 RW=write BS=128k RUNTIME=30 SEED=4323
+         ok, 32s, NVMe 47.85->46.85 C (max 47.85)
+  [run ] exp2_randread_4k_qd1_t1  SIZE=4g ENGINE=io_uring DIRECT=1 RAMP=2 RW=randread BS=4k QD=1 RUNTIME=15 SEED=4321
+         ok, 17s, NVMe 46.85->44.85 C (max 46.85)
+  [run ] exp2_randread_16k_qd1_t1  SIZE=4g ENGINE=io_uring DIRECT=1 RAMP=2 RW=randread BS=16k QD=1 RUNTIME=15 SEED=4321
+         ok, 17s, NVMe 44.85->43.85 C (max 44.85)
+  [run ] exp2_randread_32k_qd1_t1  SIZE=4g ENGINE=io_uring DIRECT=1 RAMP=2 RW=randread BS=32k QD=1 RUNTIME=15 SEED=4321
+         ok, 17s, NVMe 43.85->43.85 C (max 43.85)
+  [run ] exp2_randread_64k_qd1_t1  SIZE=4g ENGINE=io_uring DIRECT=1 RAMP=2 RW=randread BS=64k QD=1 RUNTIME=15 SEED=4321
+         ok, 17s, NVMe 43.85->42.85 C (max 43.85)
+  [run ] exp2_randread_128k_qd1_t1  SIZE=4g ENGINE=io_uring DIRECT=1 RAMP=2 RW=randread BS=128k QD=1 RUNTIME=15 SEED=4321
+         ok, 17s, NVMe 42.85->42.85 C (max 42.85)
+  [run ] exp2_randread_256k_qd1_t1  SIZE=4g ENGINE=io_uring DIRECT=1 RAMP=2 RW=randread BS=256k QD=1 RUNTIME=15 SEED=4321
+         ok, 17s, NVMe 42.85->42.85 C (max 42.85)
+  [run ] exp2_read_4k_qd1_t1  SIZE=4g ENGINE=io_uring DIRECT=1 RAMP=2 RW=read BS=4k QD=1 RUNTIME=15 SEED=4321
+         ok, 17s, NVMe 42.85->42.85 C (max 42.85)
+  [run ] exp2_read_16k_qd1_t1  SIZE=4g ENGINE=io_uring DIRECT=1 RAMP=2 RW=read BS=16k QD=1 RUNTIME=15 SEED=4321
+         ok, 17s, NVMe 42.85->42.85 C (max 42.85)
+  [run ] exp2_read_32k_qd1_t1  SIZE=4g ENGINE=io_uring DIRECT=1 RAMP=2 RW=read BS=32k QD=1 RUNTIME=15 SEED=4321
+         ok, 17s, NVMe 42.85->42.85 C (max 42.85)
+  [run ] exp2_read_64k_qd1_t1  SIZE=4g ENGINE=io_uring DIRECT=1 RAMP=2 RW=read BS=64k QD=1 RUNTIME=15 SEED=4321
+         ok, 17s, NVMe 42.85->42.85 C (max 42.85)
+  [run ] exp2_read_128k_qd1_t1  SIZE=4g ENGINE=io_uring DIRECT=1 RAMP=2 RW=read BS=128k QD=1 RUNTIME=15 SEED=4321
+         ok, 17s, NVMe 42.85->42.85 C (max 42.85)
+  [run ] exp2_read_256k_qd1_t1  SIZE=4g ENGINE=io_uring DIRECT=1 RAMP=2 RW=read BS=256k QD=1 RUNTIME=15 SEED=4321
+         ok, 17s, NVMe 42.85->43.85 C (max 43.85)
+  [run ] exp2_randread_4k_qd32_t1  SIZE=4g ENGINE=io_uring DIRECT=1 RAMP=2 RW=randread BS=4k QD=32 RUNTIME=15 SEED=4321
+         ok, 17s, NVMe 43.85->44.85 C (max 44.85)
+  [run ] exp2_randread_16k_qd32_t1  SIZE=4g ENGINE=io_uring DIRECT=1 RAMP=2 RW=randread BS=16k QD=32 RUNTIME=15 SEED=4321
+         ok, 17s, NVMe 44.85->46.85 C (max 46.85)
+  [run ] exp2_randread_32k_qd32_t1  SIZE=4g ENGINE=io_uring DIRECT=1 RAMP=2 RW=randread BS=32k QD=32 RUNTIME=15 SEED=4321
+         ok, 17s, NVMe 46.85->47.85 C (max 47.85)
+  [run ] exp2_randread_64k_qd32_t1  SIZE=4g ENGINE=io_uring DIRECT=1 RAMP=2 RW=randread BS=64k QD=32 RUNTIME=15 SEED=4321
+         ok, 17s, NVMe 47.85->48.85 C (max 48.85)
+  [run ] exp2_randread_128k_qd32_t1  SIZE=4g ENGINE=io_uring DIRECT=1 RAMP=2 RW=randread BS=128k QD=32 RUNTIME=15 SEED=4321
+         ok, 17s, NVMe 48.85->48.85 C (max 48.85)
+  [run ] exp2_randread_256k_qd32_t1  SIZE=4g ENGINE=io_uring DIRECT=1 RAMP=2 RW=randread BS=256k QD=32 RUNTIME=15 SEED=4321
+         ok, 17s, NVMe 48.85->49.85 C (max 49.85)
+  [run ] exp2_read_4k_qd32_t1  SIZE=4g ENGINE=io_uring DIRECT=1 RAMP=2 RW=read BS=4k QD=32 RUNTIME=15 SEED=4321
+         ok, 17s, NVMe 49.85->48.85 C (max 49.85)
+  [run ] exp2_read_16k_qd32_t1  SIZE=4g ENGINE=io_uring DIRECT=1 RAMP=2 RW=read BS=16k QD=32 RUNTIME=15 SEED=4321
+         ok, 17s, NVMe 48.85->50.85 C (max 50.85)
+  [run ] exp2_read_32k_qd32_t1  SIZE=4g ENGINE=io_uring DIRECT=1 RAMP=2 RW=read BS=32k QD=32 RUNTIME=15 SEED=4321
+         ok, 17s, NVMe 50.85->51.85 C (max 51.85)
+  [run ] exp2_read_64k_qd32_t1  SIZE=4g ENGINE=io_uring DIRECT=1 RAMP=2 RW=read BS=64k QD=32 RUNTIME=15 SEED=4321
+         ok, 17s, NVMe 51.85->50.85 C (max 51.85)
+  [run ] exp2_read_128k_qd32_t1  SIZE=4g ENGINE=io_uring DIRECT=1 RAMP=2 RW=read BS=128k QD=32 RUNTIME=15 SEED=4321
+         ok, 17s, NVMe 50.85->50.85 C (max 50.85)
+  [run ] exp2_read_256k_qd32_t1  SIZE=4g ENGINE=io_uring DIRECT=1 RAMP=2 RW=read BS=256k QD=32 RUNTIME=15 SEED=4321
+         ok, 17s, NVMe 50.85->50.85 C (max 50.85)
+  [run ] exp2_randread_4k_qd1_t2  SIZE=4g ENGINE=io_uring DIRECT=1 RAMP=2 RW=randread BS=4k QD=1 RUNTIME=15 SEED=4322
+         ok, 17s, NVMe 50.85->47.85 C (max 50.85)
+  [run ] exp2_randread_16k_qd1_t2  SIZE=4g ENGINE=io_uring DIRECT=1 RAMP=2 RW=randread BS=16k QD=1 RUNTIME=15 SEED=4322
+         ok, 17s, NVMe 47.85->45.85 C (max 47.85)
+  [run ] exp2_randread_32k_qd1_t2  SIZE=4g ENGINE=io_uring DIRECT=1 RAMP=2 RW=randread BS=32k QD=1 RUNTIME=15 SEED=4322
+         ok, 17s, NVMe 45.85->44.85 C (max 45.85)
+  [run ] exp2_randread_64k_qd1_t2  SIZE=4g ENGINE=io_uring DIRECT=1 RAMP=2 RW=randread BS=64k QD=1 RUNTIME=15 SEED=4322
+         ok, 17s, NVMe 44.85->43.85 C (max 44.85)
+  [run ] exp2_randread_128k_qd1_t2  SIZE=4g ENGINE=io_uring DIRECT=1 RAMP=2 RW=randread BS=128k QD=1 RUNTIME=15 SEED=4322
+         ok, 17s, NVMe 43.85->43.85 C (max 43.85)
+  [run ] exp2_randread_256k_qd1_t2  SIZE=4g ENGINE=io_uring DIRECT=1 RAMP=2 RW=randread BS=256k QD=1 RUNTIME=15 SEED=4322
+         ok, 17s, NVMe 43.85->43.85 C (max 43.85)
+  [run ] exp2_read_4k_qd1_t2  SIZE=4g ENGINE=io_uring DIRECT=1 RAMP=2 RW=read BS=4k QD=1 RUNTIME=15 SEED=4322
+         ok, 17s, NVMe 43.85->42.85 C (max 43.85)
+  [run ] exp2_read_16k_qd1_t2  SIZE=4g ENGINE=io_uring DIRECT=1 RAMP=2 RW=read BS=16k QD=1 RUNTIME=15 SEED=4322
+         ok, 17s, NVMe 42.85->42.85 C (max 42.85)
+  [run ] exp2_read_32k_qd1_t2  SIZE=4g ENGINE=io_uring DIRECT=1 RAMP=2 RW=read BS=32k QD=1 RUNTIME=15 SEED=4322
+         ok, 17s, NVMe 42.85->42.85 C (max 42.85)
+  [run ] exp2_read_64k_qd1_t2  SIZE=4g ENGINE=io_uring DIRECT=1 RAMP=2 RW=read BS=64k QD=1 RUNTIME=15 SEED=4322
+         ok, 17s, NVMe 42.85->42.85 C (max 42.85)
+  [run ] exp2_read_128k_qd1_t2  SIZE=4g ENGINE=io_uring DIRECT=1 RAMP=2 RW=read BS=128k QD=1 RUNTIME=15 SEED=4322
+         ok, 17s, NVMe 42.85->42.85 C (max 42.85)
+  [run ] exp2_read_256k_qd1_t2  SIZE=4g ENGINE=io_uring DIRECT=1 RAMP=2 RW=read BS=256k QD=1 RUNTIME=15 SEED=4322
+         ok, 17s, NVMe 42.85->43.85 C (max 43.85)
+  [run ] exp2_randread_4k_qd32_t2  SIZE=4g ENGINE=io_uring DIRECT=1 RAMP=2 RW=randread BS=4k QD=32 RUNTIME=15 SEED=4322
+         ok, 17s, NVMe 43.85->44.85 C (max 43.85)
+  [run ] exp2_randread_16k_qd32_t2  SIZE=4g ENGINE=io_uring DIRECT=1 RAMP=2 RW=randread BS=16k QD=32 RUNTIME=15 SEED=4322
+         ok, 17s, NVMe 44.85->45.85 C (max 45.85)
+  [run ] exp2_randread_32k_qd32_t2  SIZE=4g ENGINE=io_uring DIRECT=1 RAMP=2 RW=randread BS=32k QD=32 RUNTIME=15 SEED=4322
+         ok, 17s, NVMe 45.85->47.85 C (max 47.85)
+  [run ] exp2_randread_64k_qd32_t2  SIZE=4g ENGINE=io_uring DIRECT=1 RAMP=2 RW=randread BS=64k QD=32 RUNTIME=15 SEED=4322
+         ok, 17s, NVMe 47.85->47.85 C (max 47.85)
+  [run ] exp2_randread_128k_qd32_t2  SIZE=4g ENGINE=io_uring DIRECT=1 RAMP=2 RW=randread BS=128k QD=32 RUNTIME=15 SEED=4322
+         ok, 17s, NVMe 47.85->48.85 C (max 48.85)
+  [run ] exp2_randread_256k_qd32_t2  SIZE=4g ENGINE=io_uring DIRECT=1 RAMP=2 RW=randread BS=256k QD=32 RUNTIME=15 SEED=4322
+         ok, 17s, NVMe 48.85->48.85 C (max 48.85)
+  [run ] exp2_read_4k_qd32_t2  SIZE=4g ENGINE=io_uring DIRECT=1 RAMP=2 RW=read BS=4k QD=32 RUNTIME=15 SEED=4322
+         ok, 17s, NVMe 48.85->48.85 C (max 48.85)
+  [run ] exp2_read_16k_qd32_t2  SIZE=4g ENGINE=io_uring DIRECT=1 RAMP=2 RW=read BS=16k QD=32 RUNTIME=15 SEED=4322
+         ok, 17s, NVMe 48.85->50.85 C (max 50.85)
+  [run ] exp2_read_32k_qd32_t2  SIZE=4g ENGINE=io_uring DIRECT=1 RAMP=2 RW=read BS=32k QD=32 RUNTIME=15 SEED=4322
+         ok, 17s, NVMe 50.85->51.85 C (max 51.85)
+  [run ] exp2_read_64k_qd32_t2  SIZE=4g ENGINE=io_uring DIRECT=1 RAMP=2 RW=read BS=64k QD=32 RUNTIME=15 SEED=4322
+         ok, 17s, NVMe 51.85->50.85 C (max 51.85)
+  [run ] exp2_read_128k_qd32_t2  SIZE=4g ENGINE=io_uring DIRECT=1 RAMP=2 RW=read BS=128k QD=32 RUNTIME=15 SEED=4322
+         ok, 17s, NVMe 50.85->50.85 C (max 50.85)
+  [run ] exp2_read_256k_qd32_t2  SIZE=4g ENGINE=io_uring DIRECT=1 RAMP=2 RW=read BS=256k QD=32 RUNTIME=15 SEED=4322
+         ok, 17s, NVMe 50.85->50.85 C (max 50.85)
+  [run ] exp2_randread_4k_qd1_t3  SIZE=4g ENGINE=io_uring DIRECT=1 RAMP=2 RW=randread BS=4k QD=1 RUNTIME=15 SEED=4323
+         ok, 17s, NVMe 50.85->47.85 C (max 50.85)
+  [run ] exp2_randread_16k_qd1_t3  SIZE=4g ENGINE=io_uring DIRECT=1 RAMP=2 RW=randread BS=16k QD=1 RUNTIME=15 SEED=4323
+         ok, 17s, NVMe 47.85->45.85 C (max 47.85)
+  [run ] exp2_randread_32k_qd1_t3  SIZE=4g ENGINE=io_uring DIRECT=1 RAMP=2 RW=randread BS=32k QD=1 RUNTIME=15 SEED=4323
+         ok, 17s, NVMe 45.85->44.85 C (max 45.85)
+  [run ] exp2_randread_64k_qd1_t3  SIZE=4g ENGINE=io_uring DIRECT=1 RAMP=2 RW=randread BS=64k QD=1 RUNTIME=15 SEED=4323
+         ok, 17s, NVMe 44.85->43.85 C (max 44.85)
+  [run ] exp2_randread_128k_qd1_t3  SIZE=4g ENGINE=io_uring DIRECT=1 RAMP=2 RW=randread BS=128k QD=1 RUNTIME=15 SEED=4323
+         ok, 17s, NVMe 43.85->43.85 C (max 43.85)
+  [run ] exp2_randread_256k_qd1_t3  SIZE=4g ENGINE=io_uring DIRECT=1 RAMP=2 RW=randread BS=256k QD=1 RUNTIME=15 SEED=4323
+         ok, 17s, NVMe 43.85->43.85 C (max 43.85)
+  [run ] exp2_read_4k_qd1_t3  SIZE=4g ENGINE=io_uring DIRECT=1 RAMP=2 RW=read BS=4k QD=1 RUNTIME=15 SEED=4323
+         ok, 17s, NVMe 43.85->42.85 C (max 43.85)
+  [run ] exp2_read_16k_qd1_t3  SIZE=4g ENGINE=io_uring DIRECT=1 RAMP=2 RW=read BS=16k QD=1 RUNTIME=15 SEED=4323
+         ok, 17s, NVMe 42.85->42.85 C (max 42.85)
+  [run ] exp2_read_32k_qd1_t3  SIZE=4g ENGINE=io_uring DIRECT=1 RAMP=2 RW=read BS=32k QD=1 RUNTIME=15 SEED=4323
+         ok, 17s, NVMe 42.85->42.85 C (max 42.85)
+  [run ] exp2_read_64k_qd1_t3  SIZE=4g ENGINE=io_uring DIRECT=1 RAMP=2 RW=read BS=64k QD=1 RUNTIME=15 SEED=4323
+         ok, 17s, NVMe 42.85->42.85 C (max 42.85)
+  [run ] exp2_read_128k_qd1_t3  SIZE=4g ENGINE=io_uring DIRECT=1 RAMP=2 RW=read BS=128k QD=1 RUNTIME=15 SEED=4323
+         ok, 17s, NVMe 42.85->42.85 C (max 42.85)
+  [run ] exp2_read_256k_qd1_t3  SIZE=4g ENGINE=io_uring DIRECT=1 RAMP=2 RW=read BS=256k QD=1 RUNTIME=15 SEED=4323
+         ok, 17s, NVMe 42.85->43.85 C (max 43.85)
+  [run ] exp2_randread_4k_qd32_t3  SIZE=4g ENGINE=io_uring DIRECT=1 RAMP=2 RW=randread BS=4k QD=32 RUNTIME=15 SEED=4323
+         ok, 17s, NVMe 43.85->43.85 C (max 43.85)
+  [run ] exp2_randread_16k_qd32_t3  SIZE=4g ENGINE=io_uring DIRECT=1 RAMP=2 RW=randread BS=16k QD=32 RUNTIME=15 SEED=4323
+         ok, 17s, NVMe 43.85->45.85 C (max 45.85)
+  [run ] exp2_randread_32k_qd32_t3  SIZE=4g ENGINE=io_uring DIRECT=1 RAMP=2 RW=randread BS=32k QD=32 RUNTIME=15 SEED=4323
+         ok, 17s, NVMe 45.85->46.85 C (max 46.85)
+  [run ] exp2_randread_64k_qd32_t3  SIZE=4g ENGINE=io_uring DIRECT=1 RAMP=2 RW=randread BS=64k QD=32 RUNTIME=15 SEED=4323
+         ok, 17s, NVMe 46.85->47.85 C (max 47.85)
+  [run ] exp2_randread_128k_qd32_t3  SIZE=4g ENGINE=io_uring DIRECT=1 RAMP=2 RW=randread BS=128k QD=32 RUNTIME=15 SEED=4323
+         ok, 17s, NVMe 47.85->47.85 C (max 47.85)
+  [run ] exp2_randread_256k_qd32_t3  SIZE=4g ENGINE=io_uring DIRECT=1 RAMP=2 RW=randread BS=256k QD=32 RUNTIME=15 SEED=4323
+         ok, 17s, NVMe 47.85->48.85 C (max 48.85)
+  [run ] exp2_read_4k_qd32_t3  SIZE=4g ENGINE=io_uring DIRECT=1 RAMP=2 RW=read BS=4k QD=32 RUNTIME=15 SEED=4323
+         ok, 17s, NVMe 48.85->48.85 C (max 48.85)
+  [run ] exp2_read_16k_qd32_t3  SIZE=4g ENGINE=io_uring DIRECT=1 RAMP=2 RW=read BS=16k QD=32 RUNTIME=15 SEED=4323
+         ok, 17s, NVMe 48.85->49.85 C (max 49.85)
+  [run ] exp2_read_32k_qd32_t3  SIZE=4g ENGINE=io_uring DIRECT=1 RAMP=2 RW=read BS=32k QD=32 RUNTIME=15 SEED=4323
+         ok, 17s, NVMe 49.85->50.85 C (max 50.85)
+  [run ] exp2_read_64k_qd32_t3  SIZE=4g ENGINE=io_uring DIRECT=1 RAMP=2 RW=read BS=64k QD=32 RUNTIME=15 SEED=4323
+         ok, 17s, NVMe 50.85->50.85 C (max 50.85)
+  [run ] exp2_read_128k_qd32_t3  SIZE=4g ENGINE=io_uring DIRECT=1 RAMP=2 RW=read BS=128k QD=32 RUNTIME=15 SEED=4323
+         ok, 17s, NVMe 50.85->49.85 C (max 50.85)
+  [run ] exp2_read_256k_qd32_t3  SIZE=4g ENGINE=io_uring DIRECT=1 RAMP=2 RW=read BS=256k QD=32 RUNTIME=15 SEED=4323
+         ok, 17s, NVMe 49.85->49.85 C (max 49.85)
+  [run ] exp3_randrw_4k_qd32_read100_t1  SIZE=4g ENGINE=io_uring DIRECT=1 RAMP=2 RWMIXREAD=100 RUNTIME=30 SEED=4321
+         ok, 32s, NVMe 49.85->48.85 C (max 49.85)
+  [run ] exp3_randrw_4k_qd32_read70_t1  SIZE=4g ENGINE=io_uring DIRECT=1 RAMP=2 RWMIXREAD=70 RUNTIME=30 SEED=4321
+         ok, 32s, NVMe 48.85->46.85 C (max 48.85)
+  [run ] exp3_randrw_4k_qd32_read50_t1  SIZE=4g ENGINE=io_uring DIRECT=1 RAMP=2 RWMIXREAD=50 RUNTIME=30 SEED=4321
+         ok, 32s, NVMe 46.85->44.85 C (max 46.85)
+  [run ] exp3_randrw_4k_qd32_read0_t1  SIZE=4g ENGINE=io_uring DIRECT=1 RAMP=2 RWMIXREAD=0 RUNTIME=30 SEED=4321
+         ok, 32s, NVMe 44.85->44.85 C (max 44.85)
+  [run ] exp3_randrw_4k_qd32_read100_t2  SIZE=4g ENGINE=io_uring DIRECT=1 RAMP=2 RWMIXREAD=100 RUNTIME=30 SEED=4322
+         ok, 32s, NVMe 44.85->46.85 C (max 46.85)
+  [run ] exp3_randrw_4k_qd32_read70_t2  SIZE=4g ENGINE=io_uring DIRECT=1 RAMP=2 RWMIXREAD=70 RUNTIME=30 SEED=4322
+         ok, 32s, NVMe 46.85->45.85 C (max 46.85)
+  [run ] exp3_randrw_4k_qd32_read50_t2  SIZE=4g ENGINE=io_uring DIRECT=1 RAMP=2 RWMIXREAD=50 RUNTIME=30 SEED=4322
+         ok, 32s, NVMe 45.85->45.85 C (max 45.85)
+  [run ] exp3_randrw_4k_qd32_read0_t2  SIZE=4g ENGINE=io_uring DIRECT=1 RAMP=2 RWMIXREAD=0 RUNTIME=30 SEED=4322
+         ok, 32s, NVMe 45.85->45.85 C (max 45.85)
+  [run ] exp3_randrw_4k_qd32_read100_t3  SIZE=4g ENGINE=io_uring DIRECT=1 RAMP=2 RWMIXREAD=100 RUNTIME=30 SEED=4323
+         ok, 32s, NVMe 45.85->46.85 C (max 46.85)
+  [run ] exp3_randrw_4k_qd32_read70_t3  SIZE=4g ENGINE=io_uring DIRECT=1 RAMP=2 RWMIXREAD=70 RUNTIME=30 SEED=4323
+         ok, 32s, NVMe 46.85->45.85 C (max 46.85)
+  [run ] exp3_randrw_4k_qd32_read50_t3  SIZE=4g ENGINE=io_uring DIRECT=1 RAMP=2 RWMIXREAD=50 RUNTIME=30 SEED=4323
+         ok, 32s, NVMe 45.85->45.85 C (max 45.85)
+  [run ] exp3_randrw_4k_qd32_read0_t3  SIZE=4g ENGINE=io_uring DIRECT=1 RAMP=2 RWMIXREAD=0 RUNTIME=30 SEED=4323
+         ok, 32s, NVMe 45.85->44.85 C (max 45.85)
+  [run ] exp4_randread_4k_nj1_qd1_t1  SIZE=4g ENGINE=io_uring DIRECT=1 RAMP=2 QD=1 NJ=1 RUNTIME=20 SEED=4321
+         ok, 22s, NVMe 44.85->43.85 C (max 44.85)
+  [run ] exp4_randread_4k_nj1_qd2_t1  SIZE=4g ENGINE=io_uring DIRECT=1 RAMP=2 QD=2 NJ=1 RUNTIME=20 SEED=4321
+         ok, 22s, NVMe 43.85->42.85 C (max 43.85)
+  [run ] exp4_randread_4k_nj1_qd4_t1  SIZE=4g ENGINE=io_uring DIRECT=1 RAMP=2 QD=4 NJ=1 RUNTIME=20 SEED=4321
+         ok, 22s, NVMe 42.85->42.85 C (max 42.85)
+  [run ] exp4_randread_4k_nj1_qd8_t1  SIZE=4g ENGINE=io_uring DIRECT=1 RAMP=2 QD=8 NJ=1 RUNTIME=20 SEED=4321
+         ok, 22s, NVMe 42.85->42.85 C (max 42.85)
+  [run ] exp4_randread_4k_nj1_qd16_t1  SIZE=4g ENGINE=io_uring DIRECT=1 RAMP=2 QD=16 NJ=1 RUNTIME=20 SEED=4321
+         ok, 22s, NVMe 42.85->42.85 C (max 42.85)
+  [run ] exp4_randread_4k_nj1_qd32_t1  SIZE=4g ENGINE=io_uring DIRECT=1 RAMP=2 QD=32 NJ=1 RUNTIME=20 SEED=4321
+         ok, 22s, NVMe 42.85->43.85 C (max 43.85)
+  [run ] exp4_randread_4k_nj1_qd64_t1  SIZE=4g ENGINE=io_uring DIRECT=1 RAMP=2 QD=64 NJ=1 RUNTIME=20 SEED=4321
+         ok, 22s, NVMe 43.85->44.85 C (max 44.85)
+  [run ] exp4_randread_4k_nj1_qd128_t1  SIZE=4g ENGINE=io_uring DIRECT=1 RAMP=2 QD=128 NJ=1 RUNTIME=20 SEED=4321
+         ok, 22s, NVMe 44.85->45.85 C (max 45.85)
+  [run ] exp4_randread_4k_nj1_qd256_t1  SIZE=4g ENGINE=io_uring DIRECT=1 RAMP=2 QD=256 NJ=1 RUNTIME=20 SEED=4321
+         ok, 22s, NVMe 45.85->45.85 C (max 45.85)
+  [run ] exp4_randread_4k_nj4_qd1_t1  SIZE=4g ENGINE=io_uring DIRECT=1 RAMP=2 QD=1 NJ=4 RUNTIME=20 SEED=4321
+         ok, 22s, NVMe 45.85->43.85 C (max 45.85)
+  [run ] exp4_randread_4k_nj4_qd2_t1  SIZE=4g ENGINE=io_uring DIRECT=1 RAMP=2 QD=2 NJ=4 RUNTIME=20 SEED=4321
+         ok, 22s, NVMe 43.85->43.85 C (max 43.85)
+  [run ] exp4_randread_4k_nj4_qd4_t1  SIZE=4g ENGINE=io_uring DIRECT=1 RAMP=2 QD=4 NJ=4 RUNTIME=20 SEED=4321
+         ok, 22s, NVMe 43.85->43.85 C (max 43.85)
+  [run ] exp4_randread_4k_nj4_qd8_t1  SIZE=4g ENGINE=io_uring DIRECT=1 RAMP=2 QD=8 NJ=4 RUNTIME=20 SEED=4321
+         ok, 22s, NVMe 43.85->44.85 C (max 44.85)
+  [run ] exp4_randread_4k_nj4_qd16_t1  SIZE=4g ENGINE=io_uring DIRECT=1 RAMP=2 QD=16 NJ=4 RUNTIME=20 SEED=4321
+         ok, 22s, NVMe 44.85->46.85 C (max 46.85)
+  [run ] exp4_randread_4k_nj4_qd32_t1  SIZE=4g ENGINE=io_uring DIRECT=1 RAMP=2 QD=32 NJ=4 RUNTIME=20 SEED=4321
+         ok, 22s, NVMe 46.85->48.85 C (max 48.85)
+  [run ] exp4_randread_4k_nj4_qd64_t1  SIZE=4g ENGINE=io_uring DIRECT=1 RAMP=2 QD=64 NJ=4 RUNTIME=20 SEED=4321
+         ok, 22s, NVMe 48.85->50.85 C (max 49.85)
+  [run ] exp4_randread_4k_nj1_qd1_t2  SIZE=4g ENGINE=io_uring DIRECT=1 RAMP=2 QD=1 NJ=1 RUNTIME=20 SEED=4322
+         ok, 22s, NVMe 50.85->45.85 C (max 50.85)
+  [run ] exp4_randread_4k_nj1_qd2_t2  SIZE=4g ENGINE=io_uring DIRECT=1 RAMP=2 QD=2 NJ=1 RUNTIME=20 SEED=4322
+         ok, 22s, NVMe 45.85->44.85 C (max 45.85)
+  [run ] exp4_randread_4k_nj1_qd4_t2  SIZE=4g ENGINE=io_uring DIRECT=1 RAMP=2 QD=4 NJ=1 RUNTIME=20 SEED=4322
+         ok, 22s, NVMe 44.85->43.85 C (max 44.85)
+  [run ] exp4_randread_4k_nj1_qd8_t2  SIZE=4g ENGINE=io_uring DIRECT=1 RAMP=2 QD=8 NJ=1 RUNTIME=20 SEED=4322
+         ok, 22s, NVMe 43.85->42.85 C (max 43.85)
+  [run ] exp4_randread_4k_nj1_qd16_t2  SIZE=4g ENGINE=io_uring DIRECT=1 RAMP=2 QD=16 NJ=1 RUNTIME=20 SEED=4322
+         ok, 22s, NVMe 42.85->43.85 C (max 43.85)
+  [run ] exp4_randread_4k_nj1_qd32_t2  SIZE=4g ENGINE=io_uring DIRECT=1 RAMP=2 QD=32 NJ=1 RUNTIME=20 SEED=4322
+         ok, 22s, NVMe 43.85->44.85 C (max 44.85)
+  [run ] exp4_randread_4k_nj1_qd64_t2  SIZE=4g ENGINE=io_uring DIRECT=1 RAMP=2 QD=64 NJ=1 RUNTIME=20 SEED=4322
+         ok, 22s, NVMe 44.85->45.85 C (max 45.85)
+  [run ] exp4_randread_4k_nj1_qd128_t2  SIZE=4g ENGINE=io_uring DIRECT=1 RAMP=2 QD=128 NJ=1 RUNTIME=20 SEED=4322
+         ok, 22s, NVMe 45.85->45.85 C (max 45.85)
+  [run ] exp4_randread_4k_nj1_qd256_t2  SIZE=4g ENGINE=io_uring DIRECT=1 RAMP=2 QD=256 NJ=1 RUNTIME=20 SEED=4322
+         ok, 22s, NVMe 45.85->45.85 C (max 46.85)
+  [run ] exp4_randread_4k_nj4_qd1_t2  SIZE=4g ENGINE=io_uring DIRECT=1 RAMP=2 QD=1 NJ=4 RUNTIME=20 SEED=4322
+         ok, 22s, NVMe 45.85->43.85 C (max 45.85)
+  [run ] exp4_randread_4k_nj4_qd2_t2  SIZE=4g ENGINE=io_uring DIRECT=1 RAMP=2 QD=2 NJ=4 RUNTIME=20 SEED=4322
+         ok, 22s, NVMe 43.85->43.85 C (max 43.85)
+  [run ] exp4_randread_4k_nj4_qd4_t2  SIZE=4g ENGINE=io_uring DIRECT=1 RAMP=2 QD=4 NJ=4 RUNTIME=20 SEED=4322
+         ok, 22s, NVMe 43.85->43.85 C (max 43.85)
+  [run ] exp4_randread_4k_nj4_qd8_t2  SIZE=4g ENGINE=io_uring DIRECT=1 RAMP=2 QD=8 NJ=4 RUNTIME=20 SEED=4322
+         ok, 22s, NVMe 43.85->44.85 C (max 44.85)
+  [run ] exp4_randread_4k_nj4_qd16_t2  SIZE=4g ENGINE=io_uring DIRECT=1 RAMP=2 QD=16 NJ=4 RUNTIME=20 SEED=4322
+         ok, 22s, NVMe 44.85->46.85 C (max 46.85)
+  [run ] exp4_randread_4k_nj4_qd32_t2  SIZE=4g ENGINE=io_uring DIRECT=1 RAMP=2 QD=32 NJ=4 RUNTIME=20 SEED=4322
+         ok, 22s, NVMe 46.85->48.85 C (max 48.85)
+  [run ] exp4_randread_4k_nj4_qd64_t2  SIZE=4g ENGINE=io_uring DIRECT=1 RAMP=2 QD=64 NJ=4 RUNTIME=20 SEED=4322
+         ok, 22s, NVMe 48.85->50.85 C (max 50.85)
+  [run ] exp4_randread_4k_nj1_qd1_t3  SIZE=4g ENGINE=io_uring DIRECT=1 RAMP=2 QD=1 NJ=1 RUNTIME=20 SEED=4323
+         ok, 22s, NVMe 50.85->46.85 C (max 50.85)
+  [run ] exp4_randread_4k_nj1_qd2_t3  SIZE=4g ENGINE=io_uring DIRECT=1 RAMP=2 QD=2 NJ=1 RUNTIME=20 SEED=4323
+         ok, 22s, NVMe 46.85->44.85 C (max 46.85)
+  [run ] exp4_randread_4k_nj1_qd4_t3  SIZE=4g ENGINE=io_uring DIRECT=1 RAMP=2 QD=4 NJ=1 RUNTIME=20 SEED=4323
+         ok, 22s, NVMe 44.85->43.85 C (max 44.85)
+  [run ] exp4_randread_4k_nj1_qd8_t3  SIZE=4g ENGINE=io_uring DIRECT=1 RAMP=2 QD=8 NJ=1 RUNTIME=20 SEED=4323
+         ok, 22s, NVMe 43.85->43.85 C (max 43.85)
+  [run ] exp4_randread_4k_nj1_qd16_t3  SIZE=4g ENGINE=io_uring DIRECT=1 RAMP=2 QD=16 NJ=1 RUNTIME=20 SEED=4323
+         ok, 22s, NVMe 43.85->43.85 C (max 43.85)
+  [run ] exp4_randread_4k_nj1_qd32_t3  SIZE=4g ENGINE=io_uring DIRECT=1 RAMP=2 QD=32 NJ=1 RUNTIME=20 SEED=4323
+         ok, 22s, NVMe 43.85->44.85 C (max 44.85)
+  [run ] exp4_randread_4k_nj1_qd64_t3  SIZE=4g ENGINE=io_uring DIRECT=1 RAMP=2 QD=64 NJ=1 RUNTIME=20 SEED=4323
+         ok, 22s, NVMe 44.85->45.85 C (max 45.85)
+  [run ] exp4_randread_4k_nj1_qd128_t3  SIZE=4g ENGINE=io_uring DIRECT=1 RAMP=2 QD=128 NJ=1 RUNTIME=20 SEED=4323
+         ok, 22s, NVMe 45.85->45.85 C (max 45.85)
+  [run ] exp4_randread_4k_nj1_qd256_t3  SIZE=4g ENGINE=io_uring DIRECT=1 RAMP=2 QD=256 NJ=1 RUNTIME=20 SEED=4323
+         ok, 22s, NVMe 45.85->45.85 C (max 45.85)
+  [run ] exp4_randread_4k_nj4_qd1_t3  SIZE=4g ENGINE=io_uring DIRECT=1 RAMP=2 QD=1 NJ=4 RUNTIME=20 SEED=4323
+         ok, 22s, NVMe 45.85->43.85 C (max 45.85)
+  [run ] exp4_randread_4k_nj4_qd2_t3  SIZE=4g ENGINE=io_uring DIRECT=1 RAMP=2 QD=2 NJ=4 RUNTIME=20 SEED=4323
+         ok, 22s, NVMe 43.85->43.85 C (max 43.85)
+  [run ] exp4_randread_4k_nj4_qd4_t3  SIZE=4g ENGINE=io_uring DIRECT=1 RAMP=2 QD=4 NJ=4 RUNTIME=20 SEED=4323
+         ok, 22s, NVMe 43.85->43.85 C (max 43.85)
+  [run ] exp4_randread_4k_nj4_qd8_t3  SIZE=4g ENGINE=io_uring DIRECT=1 RAMP=2 QD=8 NJ=4 RUNTIME=20 SEED=4323
+         ok, 22s, NVMe 43.85->45.85 C (max 45.85)
+  [run ] exp4_randread_4k_nj4_qd16_t3  SIZE=4g ENGINE=io_uring DIRECT=1 RAMP=2 QD=16 NJ=4 RUNTIME=20 SEED=4323
+         ok, 22s, NVMe 45.85->46.85 C (max 46.85)
+  [run ] exp4_randread_4k_nj4_qd32_t3  SIZE=4g ENGINE=io_uring DIRECT=1 RAMP=2 QD=32 NJ=4 RUNTIME=20 SEED=4323
+         ok, 22s, NVMe 46.85->48.85 C (max 48.85)
+  [run ] exp4_randread_4k_nj4_qd64_t3  SIZE=4g ENGINE=io_uring DIRECT=1 RAMP=2 QD=64 NJ=4 RUNTIME=20 SEED=4323
+         ok, 22s, NVMe 48.85->50.85 C (max 50.85)
+exp1_qd1             expected= 12 found= 12 valid= 12 OK
+exp2_block_size      expected= 72 found= 72 valid= 72 OK
+exp3_rw_mix          expected= 12 found= 12 valid= 12 OK
+exp4_queue_depth     expected= 48 found= 48 valid= 48 OK
+exp5_tail            expected=  6 found=  0 valid=  0 INCOMPLETE
+exp6_device_state    expected= 26 found=  0 valid=  0 INCOMPLETE
+exp7_pitfall         expected= 21 found=  0 valid=  0 INCOMPLETE
+exp5 histogram bins: 0 rows
+exp6b timeseries:   0 rows
+percentiles monotone (p50<=p95<=p99<=p99.9): True
+validation: INCOMPLETE (see above)
+{
+ "rule": "knee = smallest QD with median IOPS >= 90% of max; mid = knee/4 (>=2)",
+ "peak_iops_median": 392391.280436,
+ "knee": {
+  "iodepth": 64,
+  "iops_median": 392000.99995,
+  "lat_mean_us_median": 163.06263598200002
+ },
+ "mid": {
+  "iodepth": 16,
+  "iops_median": 191658.017099,
+  "lat_mean_us_median": 83.194811818
+ }
+}
+  [run ] exp5_randread_4k_mid_qd16_t1  SIZE=4g ENGINE=io_uring DIRECT=1 RAMP=2 QD=16 RUNTIME=60 SEED=4321
+         ok, 62s, NVMe 50.85->45.85 C (max 50.85)
+  [run ] exp5_randread_4k_knee_qd64_t1  SIZE=4g ENGINE=io_uring DIRECT=1 RAMP=2 QD=64 RUNTIME=60 SEED=4321
+         ok, 62s, NVMe 45.85->47.85 C (max 47.85)
+  [run ] exp5_randread_4k_mid_qd16_t2  SIZE=4g ENGINE=io_uring DIRECT=1 RAMP=2 QD=16 RUNTIME=60 SEED=4322
+         ok, 62s, NVMe 47.85->45.85 C (max 47.85)
+  [run ] exp5_randread_4k_knee_qd64_t2  SIZE=4g ENGINE=io_uring DIRECT=1 RAMP=2 QD=64 RUNTIME=60 SEED=4322
+         ok, 62s, NVMe 45.85->47.85 C (max 47.85)
+  [run ] exp5_randread_4k_mid_qd16_t3  SIZE=4g ENGINE=io_uring DIRECT=1 RAMP=2 QD=16 RUNTIME=60 SEED=4323
+         ok, 62s, NVMe 47.85->45.85 C (max 47.85)
+  [run ] exp5_randread_4k_knee_qd64_t3  SIZE=4g ENGINE=io_uring DIRECT=1 RAMP=2 QD=64 RUNTIME=60 SEED=4323
+         ok, 62s, NVMe 45.85->47.85 C (max 47.85)
+  [run ] exp6a_randread_4k_qd32_range64m_t1  SIZE=64m ENGINE=io_uring DIRECT=1 RAMP=2 RW=randread RUNTIME=20 SEED=4321
+         ok, 22s, NVMe 47.85->47.85 C (max 47.85)
+  [run ] exp6a_randread_4k_qd32_range256m_t1  SIZE=256m ENGINE=io_uring DIRECT=1 RAMP=2 RW=randread RUNTIME=20 SEED=4321
+         ok, 22s, NVMe 47.85->47.85 C (max 47.85)
+  [run ] exp6a_randread_4k_qd32_range1g_t1  SIZE=1g ENGINE=io_uring DIRECT=1 RAMP=2 RW=randread RUNTIME=20 SEED=4321
+         ok, 22s, NVMe 47.85->47.85 C (max 47.85)
+  [run ] exp6a_randread_4k_qd32_range4g_t1  SIZE=4g ENGINE=io_uring DIRECT=1 RAMP=2 RW=randread RUNTIME=20 SEED=4321
+         ok, 22s, NVMe 47.85->47.85 C (max 47.85)
+  [run ] exp6a_randwrite_4k_qd32_range64m_t1  SIZE=64m ENGINE=io_uring DIRECT=1 RAMP=2 RW=randwrite RUNTIME=20 SEED=4321
+         ok, 22s, NVMe 47.85->45.85 C (max 47.85)
+  [run ] exp6a_randwrite_4k_qd32_range256m_t1  SIZE=256m ENGINE=io_uring DIRECT=1 RAMP=2 RW=randwrite RUNTIME=20 SEED=4321
+         ok, 22s, NVMe 45.85->44.85 C (max 45.85)
+  [run ] exp6a_randwrite_4k_qd32_range1g_t1  SIZE=1g ENGINE=io_uring DIRECT=1 RAMP=2 RW=randwrite RUNTIME=20 SEED=4321
+         ok, 22s, NVMe 44.85->44.85 C (max 44.85)
+  [run ] exp6a_randwrite_4k_qd32_range4g_t1  SIZE=4g ENGINE=io_uring DIRECT=1 RAMP=2 RW=randwrite RUNTIME=20 SEED=4321
+         ok, 22s, NVMe 44.85->43.85 C (max 44.85)
+  [run ] exp6a_randread_4k_qd32_range64m_t2  SIZE=64m ENGINE=io_uring DIRECT=1 RAMP=2 RW=randread RUNTIME=20 SEED=4322
+         ok, 22s, NVMe 43.85->45.85 C (max 45.85)
+  [run ] exp6a_randread_4k_qd32_range256m_t2  SIZE=256m ENGINE=io_uring DIRECT=1 RAMP=2 RW=randread RUNTIME=20 SEED=4322
+         ok, 22s, NVMe 45.85->46.85 C (max 46.85)
+  [run ] exp6a_randread_4k_qd32_range1g_t2  SIZE=1g ENGINE=io_uring DIRECT=1 RAMP=2 RW=randread RUNTIME=20 SEED=4322
+         ok, 22s, NVMe 46.85->46.85 C (max 46.85)
+  [run ] exp6a_randread_4k_qd32_range4g_t2  SIZE=4g ENGINE=io_uring DIRECT=1 RAMP=2 RW=randread RUNTIME=20 SEED=4322
+         ok, 22s, NVMe 46.85->46.85 C (max 46.85)
+  [run ] exp6a_randwrite_4k_qd32_range64m_t2  SIZE=64m ENGINE=io_uring DIRECT=1 RAMP=2 RW=randwrite RUNTIME=20 SEED=4322
+         ok, 22s, NVMe 46.85->44.85 C (max 46.85)
+  [run ] exp6a_randwrite_4k_qd32_range256m_t2  SIZE=256m ENGINE=io_uring DIRECT=1 RAMP=2 RW=randwrite RUNTIME=20 SEED=4322
+         ok, 22s, NVMe 44.85->44.85 C (max 44.85)
+  [run ] exp6a_randwrite_4k_qd32_range1g_t2  SIZE=1g ENGINE=io_uring DIRECT=1 RAMP=2 RW=randwrite RUNTIME=20 SEED=4322
+         ok, 22s, NVMe 44.85->43.85 C (max 44.85)
+  [run ] exp6a_randwrite_4k_qd32_range4g_t2  SIZE=4g ENGINE=io_uring DIRECT=1 RAMP=2 RW=randwrite RUNTIME=20 SEED=4322
+         ok, 22s, NVMe 43.85->43.85 C (max 43.85)
+  [run ] exp6a_randread_4k_qd32_range64m_t3  SIZE=64m ENGINE=io_uring DIRECT=1 RAMP=2 RW=randread RUNTIME=20 SEED=4323
+         ok, 22s, NVMe 43.85->45.85 C (max 45.85)
+  [run ] exp6a_randread_4k_qd32_range256m_t3  SIZE=256m ENGINE=io_uring DIRECT=1 RAMP=2 RW=randread RUNTIME=20 SEED=4323
+         ok, 22s, NVMe 45.85->45.85 C (max 45.85)
+  [run ] exp6a_randread_4k_qd32_range1g_t3  SIZE=1g ENGINE=io_uring DIRECT=1 RAMP=2 RW=randread RUNTIME=20 SEED=4323
+         ok, 22s, NVMe 45.85->46.85 C (max 46.85)
+  [run ] exp6a_randread_4k_qd32_range4g_t3  SIZE=4g ENGINE=io_uring DIRECT=1 RAMP=2 RW=randread RUNTIME=20 SEED=4323
+         ok, 22s, NVMe 46.85->46.85 C (max 46.85)
+  [run ] exp6a_randwrite_4k_qd32_range64m_t3  SIZE=64m ENGINE=io_uring DIRECT=1 RAMP=2 RW=randwrite RUNTIME=20 SEED=4323
+         ok, 22s, NVMe 46.85->44.85 C (max 46.85)
+  [run ] exp6a_randwrite_4k_qd32_range256m_t3  SIZE=256m ENGINE=io_uring DIRECT=1 RAMP=2 RW=randwrite RUNTIME=20 SEED=4323
+         ok, 22s, NVMe 44.85->43.85 C (max 44.85)
+  [run ] exp6a_randwrite_4k_qd32_range1g_t3  SIZE=1g ENGINE=io_uring DIRECT=1 RAMP=2 RW=randwrite RUNTIME=20 SEED=4323
+         ok, 22s, NVMe 43.85->43.85 C (max 43.85)
+  [run ] exp6a_randwrite_4k_qd32_range4g_t3  SIZE=4g ENGINE=io_uring DIRECT=1 RAMP=2 RW=randwrite RUNTIME=20 SEED=4323
+         ok, 22s, NVMe 43.85->43.85 C (max 43.85)
+  [idle] 120s (let the drive return to idle before the sustained run)
+  [run ] exp6b_randwrite_4k_qd32_sustained_t1  SIZE=4g ENGINE=io_uring DIRECT=1 RAMP=0 RUNTIME=90 SEED=4321 LOGPREFIX=exp6b_randwrite_4k_qd32_sustained_t1
+         ok, 90s, NVMe 36.85->41.85 C (max 41.85)
+  [idle] 120s (let the drive return to idle before the sustained run)
+  [run ] exp6b_randwrite_4k_qd32_sustained_t2  SIZE=4g ENGINE=io_uring DIRECT=1 RAMP=0 RUNTIME=90 SEED=4322 LOGPREFIX=exp6b_randwrite_4k_qd32_sustained_t2
+         ok, 90s, NVMe 35.85->40.85 C (max 40.85)
+  [run ] exp7_randread_direct_t1  SIZE=1g ENGINE=psync DIRECT=1 RAMP=2 RUNTIME=15 QD=1 SEED=4321 RW=randread INVALIDATE=1
+         ok, 17s, NVMe 40.85->40.85 C (max 40.85)
+  [run ] exp7_randread_buffered_cold_t1  SIZE=1g ENGINE=psync DIRECT=0 RAMP=0 RUNTIME=15 QD=1 SEED=4321 RW=randread INVALIDATE=1
+         ok, 15s, NVMe 40.85->40.85 C (max 40.85)
+  [run ] exp7_warmup_seqread_buffered_t1  SIZE=1g ENGINE=psync DIRECT=0 RAMP=0 RUNTIME=3 QD=1 SEED=4321 RW=read INVALIDATE=1
+         ok, 3s, NVMe 40.85->41.85 C (max 41.85)
+  [run ] exp7_randread_buffered_warm_t1  SIZE=1g ENGINE=psync DIRECT=0 RAMP=2 RUNTIME=15 QD=1 SEED=4321 RW=randread INVALIDATE=0
+         ok, 17s, NVMe 41.85->40.85 C (max 41.85)
+  [run ] exp7_randwrite_direct_t1  SIZE=1g ENGINE=psync DIRECT=1 RAMP=2 RUNTIME=15 QD=1 SEED=4321 RW=randwrite INVALIDATE=1
+         ok, 17s, NVMe 40.85->40.85 C (max 40.85)
+  [run ] exp7_randwrite_buffered_t1  SIZE=1g ENGINE=psync DIRECT=0 RAMP=2 RUNTIME=15 QD=1 SEED=4321 RW=randwrite INVALIDATE=0
+         ok, 17s, NVMe 40.85->39.85 C (max 40.85)
+  [idle] 10s (let dirty page-cache writeback drain)
+  [run ] exp7_randread_direct_psync_qd32_t1  SIZE=1g ENGINE=psync DIRECT=1 RAMP=2 RUNTIME=15 QD=32 SEED=4321 RW=randread INVALIDATE=1
+         ok, 17s, NVMe 39.85->39.85 C (max 39.85)
+  [run ] exp7_randread_direct_t2  SIZE=1g ENGINE=psync DIRECT=1 RAMP=2 RUNTIME=15 QD=1 SEED=4322 RW=randread INVALIDATE=1
+         ok, 17s, NVMe 39.85->39.85 C (max 39.85)
+  [run ] exp7_randread_buffered_cold_t2  SIZE=1g ENGINE=psync DIRECT=0 RAMP=0 RUNTIME=15 QD=1 SEED=4322 RW=randread INVALIDATE=1
+         ok, 15s, NVMe 39.85->39.85 C (max 39.85)
+  [run ] exp7_warmup_seqread_buffered_t2  SIZE=1g ENGINE=psync DIRECT=0 RAMP=0 RUNTIME=3 QD=1 SEED=4322 RW=read INVALIDATE=1
+         ok, 3s, NVMe 39.85->40.85 C (max 40.85)
+  [run ] exp7_randread_buffered_warm_t2  SIZE=1g ENGINE=psync DIRECT=0 RAMP=2 RUNTIME=15 QD=1 SEED=4322 RW=randread INVALIDATE=0
+         ok, 17s, NVMe 40.85->39.85 C (max 40.85)
+  [run ] exp7_randwrite_direct_t2  SIZE=1g ENGINE=psync DIRECT=1 RAMP=2 RUNTIME=15 QD=1 SEED=4322 RW=randwrite INVALIDATE=1
+         ok, 17s, NVMe 39.85->39.85 C (max 39.85)
+  [run ] exp7_randwrite_buffered_t2  SIZE=1g ENGINE=psync DIRECT=0 RAMP=2 RUNTIME=15 QD=1 SEED=4322 RW=randwrite INVALIDATE=0
+         ok, 17s, NVMe 39.85->39.85 C (max 39.85)
+  [idle] 10s (let dirty page-cache writeback drain)
+  [run ] exp7_randread_direct_psync_qd32_t2  SIZE=1g ENGINE=psync DIRECT=1 RAMP=2 RUNTIME=15 QD=32 SEED=4322 RW=randread INVALIDATE=1
+         ok, 17s, NVMe 39.85->38.85 C (max 39.85)
+  [run ] exp7_randread_direct_t3  SIZE=1g ENGINE=psync DIRECT=1 RAMP=2 RUNTIME=15 QD=1 SEED=4323 RW=randread INVALIDATE=1
+         ok, 17s, NVMe 38.85->38.85 C (max 38.85)
+  [run ] exp7_randread_buffered_cold_t3  SIZE=1g ENGINE=psync DIRECT=0 RAMP=0 RUNTIME=15 QD=1 SEED=4323 RW=randread INVALIDATE=1
+         ok, 15s, NVMe 38.85->39.85 C (max 39.85)
+  [run ] exp7_warmup_seqread_buffered_t3  SIZE=1g ENGINE=psync DIRECT=0 RAMP=0 RUNTIME=3 QD=1 SEED=4323 RW=read INVALIDATE=1
+         ok, 3s, NVMe 39.85->39.85 C (max 39.85)
+  [run ] exp7_randread_buffered_warm_t3  SIZE=1g ENGINE=psync DIRECT=0 RAMP=2 RUNTIME=15 QD=1 SEED=4323 RW=randread INVALIDATE=0
+         ok, 17s, NVMe 39.85->39.85 C (max 39.85)
+  [run ] exp7_randwrite_direct_t3  SIZE=1g ENGINE=psync DIRECT=1 RAMP=2 RUNTIME=15 QD=1 SEED=4323 RW=randwrite INVALIDATE=1
+         ok, 17s, NVMe 39.85->39.85 C (max 39.85)
+  [run ] exp7_randwrite_buffered_t3  SIZE=1g ENGINE=psync DIRECT=0 RAMP=2 RUNTIME=15 QD=1 SEED=4323 RW=randwrite INVALIDATE=0
+         ok, 17s, NVMe 39.85->39.85 C (max 39.85)
+  [idle] 10s (let dirty page-cache writeback drain)
+  [run ] exp7_randread_direct_psync_qd32_t3  SIZE=1g ENGINE=psync DIRECT=1 RAMP=2 RUNTIME=15 QD=32 SEED=4323 RW=randread INVALIDATE=1
+         ok, 17s, NVMe 38.85->38.85 C (max 38.85)
+exp1_qd1             expected= 12 found= 12 valid= 12 OK
+exp2_block_size      expected= 72 found= 72 valid= 72 OK
+exp3_rw_mix          expected= 12 found= 12 valid= 12 OK
+exp4_queue_depth     expected= 48 found= 48 valid= 48 OK
+exp5_tail            expected=  6 found=  6 valid=  6 OK
+exp6_device_state    expected= 26 found= 26 valid= 26 OK
+exp7_pitfall         expected= 21 found= 21 valid= 21 OK
+exp5 histogram bins: 2921 rows
+exp6b timeseries:   720 rows
+percentiles monotone (p50<=p95<=p99<=p99.9): True
+validation: PASS
+exit=0

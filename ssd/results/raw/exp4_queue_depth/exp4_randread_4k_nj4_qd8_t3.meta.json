@@ -1,0 +1,136 @@
+{
+ "run_id": "exp4_randread_4k_nj4_qd8_t3",
+ "experiment": "exp4_queue_depth",
+ "name": "exp4_randread_4k_nj4_qd8",
+ "trial": 3,
+ "job_file": "configs/exp4_queue_depth.fio",
+ "job_sha256": "1d99a7ebf1c0b8785d72dfdc12f3d1ac8153b7d1694faaaa8c99596ff4f07ebe",
+ "job_text": "; Experiment 4: queue-depth / parallelism sweep, 4 KiB random read\n; QD = iodepth per job, NJ = numjobs (results aggregated with group_reporting)\n[global]\n; --- target: the single disposable file prepared by scripts/prepare_testfile.py\nfilename=${TESTFILE}\nallow_file_create=0\nunlink=0\noffset=0\nsize=${SIZE}\n; --- engine / I/O path\nioengine=${ENGINE}\ndirect=${DIRECT}\nthread=0\n; --- timing\ntime_based=1\nramp_time=${RAMP}\nruntime=${RUNTIME}\n; --- reproducible, aligned random offsets (blockalign defaults to bs)\nrandseed=${SEED}\nrandom_generator=tausworthe64\nnorandommap=1\n; --- data pattern: incompressible pseudo-random buffer, generated once per job\nrefill_buffers=0\n; --- statistics: total latency (submit + completion) percentiles\nlat_percentiles=1\npercentile_list=1:5:10:25:50:75:90:95:99:99.5:99.9:99.99\n; aggregate numjobs>1 deliberately into one result (only exp4 parallel curve uses numjobs>1)\ngroup_reporting=1\n\n[qd_sweep]\nrw=randread\nbs=4k\niodepth=${QD}\nnumjobs=${NJ}\n",
+ "params": {
+  "SIZE": "4g",
+  "ENGINE": "io_uring",
+  "DIRECT": "1",
+  "RAMP": "2",
+  "QD": "8",
+  "NJ": "4",
+  "RUNTIME": "20",
+  "SEED": "4323"
+ },
+ "testfile": "/home/wayslab/advanced_computer_systems/ssd/testfile/fio_testfile.bin",
+ "command": [
+  "fio",
+  "--output-format=json",
+  "--output=/home/wayslab/advanced_computer_systems/ssd/results/raw/exp4_queue_depth/exp4_randread_4k_nj4_qd8_t3.json",
+  "/home/wayslab/advanced_computer_systems/ssd/configs/exp4_queue_depth.fio"
+ ],
+ "output_format": "json",
+ "started_utc": "2026-10-26T08:45:06.017087+00:00",
+ "elapsed_s": 22.28,
+ "returncode": 0,
+ "aborted_for_temperature_c": null,
+ "nvme_temp_before_c": 43.85,
+ "nvme_temp_after_c": 45.85,
+ "nvme_temp_max_c": 45.85,
+ "nvme_temp_trace": [
+  [
+   0.0,
+   43.85
+  ],
+  [
+   1.0,
+   43.85
+  ],
+  [
+   2.0,
+   43.85
+  ],
+  [
+   3.01,
+   44.85
+  ],
+  [
+   4.01,
+   44.85
+  ],
+  [
+   5.01,
+   44.85
+  ],
+  [
+   6.01,
+   44.85
+  ],
+  [
+   7.01,
+   44.85
+  ],
+  [
+   8.01,
+   44.85
+  ],
+  [
+   9.01,
+   44.85
+  ],
+  [
+   10.01,
+   44.85
+  ],
+  [
+   11.01,
+   44.85
+  ],
+  [
+   12.01,
+   44.85
+  ],
+  [
+   13.01,
+   44.85
+  ],
+  [
+   14.02,
+   44.85
+  ],
+  [
+   15.02,
+   44.85
+  ],
+  [
+   16.02,
+   44.85
+  ],
+  [
+   17.02,
+   44.85
+  ],
+  [
+   18.02,
+   44.85
+  ],
+  [
+   19.02,
+   44.85
+  ],
+  [
+   20.02,
+   44.85
+  ],
+  [
+   21.02,
+   44.85
+  ],
+  [
+   22.02,
+   45.85
+  ]
+ ],
+ "free_bytes_before": 517655830528,
+ "free_bytes_after": 517655695360,
+ "power": {
+  "ac_online": true,
+  "battery_pct": 100,
+  "platform_profile": "balanced"
+ },
+ "stderr_file": "exp4_randread_4k_nj4_qd8_t3.stderr.txt"
+}

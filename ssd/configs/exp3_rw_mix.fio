@@ -1,0 +1,35 @@
+; Experiment 3: read/write mix sweep, 4 KiB random, iodepth=32, numjobs=1
+; RWMIXREAD = percentage of reads (100, 70, 50, 0)
+[global]
+; --- target: the single disposable file prepared by scripts/prepare_testfile.py
+filename=${TESTFILE}
+allow_file_create=0
+unlink=0
+offset=0
+size=${SIZE}
+; --- engine / I/O path
+ioengine=${ENGINE}
+direct=${DIRECT}
+thread=0
+; --- timing
+time_based=1
+ramp_time=${RAMP}
+runtime=${RUNTIME}
+; --- reproducible, aligned random offsets (blockalign defaults to bs)
+randseed=${SEED}
+random_generator=tausworthe64
+norandommap=1
+; --- data pattern: incompressible pseudo-random buffer, generated once per job
+refill_buffers=0
+; --- statistics: total latency (submit + completion) percentiles
+lat_percentiles=1
+percentile_list=1:5:10:25:50:75:90:95:99:99.5:99.9:99.99
+; aggregate numjobs>1 deliberately into one result (only exp4 parallel curve uses numjobs>1)
+group_reporting=1
+
+[rw_mix]
+rw=randrw
+rwmixread=${RWMIXREAD}
+bs=4k
+iodepth=32
+numjobs=1

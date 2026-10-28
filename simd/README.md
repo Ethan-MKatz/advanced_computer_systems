@@ -35,7 +35,7 @@ Uses arithmetic intensity and achieved performance to investigate computational 
 
 ## Building and Running
 
-The benchmark implementations are written in C++. Compiler options and run commands depend on the specific experiment. See the source files, scripts, and environment notes for details.
+Each benchmark in `src/` is built twice: a scalar build (`-O3 -fno-tree-vectorize -fno-tree-slp-vectorize`) and a SIMD build (`-O3 -march=native`). Build flags, the experiment matrix, data locations, plotting scripts and limitations are documented in [report/methodology.md](report/methodology.md).
 
 ## Reproducibility
 

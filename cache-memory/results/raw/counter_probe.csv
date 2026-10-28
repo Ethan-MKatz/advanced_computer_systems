@@ -1,0 +1,7 @@
+event,type,status,detail
+hw_cpu_cycles,0,unavailable,Permission denied
+hw_cache_misses,0,unavailable,Permission denied
+l1d_read_miss,3,unavailable,Permission denied
+dtlb_read_miss,3,unavailable,Permission denied
+sw_page_faults,1,unavailable,Permission denied
+sw_task_clock,1,unavailable,Permission denied

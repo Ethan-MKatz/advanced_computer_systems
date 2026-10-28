@@ -1,0 +1,14 @@
+{
+ "rule": "knee = smallest QD with median IOPS >= 90% of max; mid = knee/4 (>=2)",
+ "peak_iops_median": 392391.280436,
+ "knee": {
+  "iodepth": 64,
+  "iops_median": 392000.99995,
+  "lat_mean_us_median": 163.06263598200002
+ },
+ "mid": {
+  "iodepth": 16,
+  "iops_median": 191658.017099,
+  "lat_mean_us_median": 83.194811818
+ }
+}

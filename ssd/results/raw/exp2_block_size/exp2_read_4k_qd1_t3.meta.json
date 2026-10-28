@@ -1,0 +1,117 @@
+{
+ "run_id": "exp2_read_4k_qd1_t3",
+ "experiment": "exp2_block_size",
+ "name": "exp2_read_4k_qd1",
+ "trial": 3,
+ "job_file": "configs/exp2_block_size.fio",
+ "job_sha256": "b2905ba2253d28a252147af8466788d4f4251a453fe15a735f3dc3f67e355589",
+ "job_text": "; Experiment 2: block-size x access-pattern sweep (reads)\n; RW in {randread,read}, BS in {4k..256k}, QD in {1,32}, numjobs=1\n[global]\n; --- target: the single disposable file prepared by scripts/prepare_testfile.py\nfilename=${TESTFILE}\nallow_file_create=0\nunlink=0\noffset=0\nsize=${SIZE}\n; --- engine / I/O path\nioengine=${ENGINE}\ndirect=${DIRECT}\nthread=0\n; --- timing\ntime_based=1\nramp_time=${RAMP}\nruntime=${RUNTIME}\n; --- reproducible, aligned random offsets (blockalign defaults to bs)\nrandseed=${SEED}\nrandom_generator=tausworthe64\nnorandommap=1\n; --- data pattern: incompressible pseudo-random buffer, generated once per job\nrefill_buffers=0\n; --- statistics: total latency (submit + completion) percentiles\nlat_percentiles=1\npercentile_list=1:5:10:25:50:75:90:95:99:99.5:99.9:99.99\n; aggregate numjobs>1 deliberately into one result (only exp4 parallel curve uses numjobs>1)\ngroup_reporting=1\n\n[bs_sweep]\nrw=${RW}\nbs=${BS}\niodepth=${QD}\nnumjobs=1\n",
+ "params": {
+  "SIZE": "4g",
+  "ENGINE": "io_uring",
+  "DIRECT": "1",
+  "RAMP": "2",
+  "RW": "read",
+  "BS": "4k",
+  "QD": "1",
+  "RUNTIME": "15",
+  "SEED": "4323"
+ },
+ "testfile": "/home/wayslab/advanced_computer_systems/ssd/testfile/fio_testfile.bin",
+ "command": [
+  "fio",
+  "--output-format=json",
+  "--output=/home/wayslab/advanced_computer_systems/ssd/results/raw/exp2_block_size/exp2_read_4k_qd1_t3.json",
+  "/home/wayslab/advanced_computer_systems/ssd/configs/exp2_block_size.fio"
+ ],
+ "output_format": "json",
+ "started_utc": "2026-10-26T08:17:05.051722+00:00",
+ "elapsed_s": 17.29,
+ "returncode": 0,
+ "aborted_for_temperature_c": null,
+ "nvme_temp_before_c": 43.85,
+ "nvme_temp_after_c": 42.85,
+ "nvme_temp_max_c": 43.85,
+ "nvme_temp_trace": [
+  [
+   0.0,
+   43.85
+  ],
+  [
+   1.01,
+   43.85
+  ],
+  [
+   2.01,
+   43.85
+  ],
+  [
+   3.01,
+   43.85
+  ],
+  [
+   4.01,
+   43.85
+  ],
+  [
+   5.02,
+   43.85
+  ],
+  [
+   6.02,
+   43.85
+  ],
+  [
+   7.02,
+   43.85
+  ],
+  [
+   8.02,
+   43.85
+  ],
+  [
+   9.02,
+   43.85
+  ],
+  [
+   10.03,
+   43.85
+  ],
+  [
+   11.03,
+   43.85
+  ],
+  [
+   12.03,
+   43.85
+  ],
+  [
+   13.03,
+   42.85
+  ],
+  [
+   14.04,
+   42.85
+  ],
+  [
+   15.04,
+   42.85
+  ],
+  [
+   16.04,
+   42.85
+  ],
+  [
+   17.04,
+   42.85
+  ]
+ ],
+ "free_bytes_before": 517693878272,
+ "free_bytes_after": 517693763584,
+ "power": {
+  "ac_online": true,
+  "battery_pct": 94,
+  "platform_profile": "balanced"
+ },
+ "stderr_file": "exp2_read_4k_qd1_t3.stderr.txt"
+}
